@@ -8,9 +8,6 @@ export default function Header() {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 			</div>
-			<div className='flex-end'>
-				<a className='text-xl text-magenta' href='/'> Contact </a>
-			</div>
 			</nav>
 		</>
 	)
