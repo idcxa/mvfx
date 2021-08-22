@@ -1,9 +1,40 @@
+@import './colours';
+
 .div1 {
 	padding: 5%;
 }
 
 .cell {
 	padding-left: 20%;
+}
+
+/* products */
+.product {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 40vw;
+}
+
+.list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 4vw;
+	padding-left: 10vw;
+	.item {
+		color: #113;
+		margin: 10px;
+		padding: 30px;
+		border: 2px solid;
+		border-radius: 8px;
+		background: $cambridge-blue;
+	}
+	.item:hover {
+		background: $pale-spring;
+	}
 }
 
 /* table */
@@ -59,3 +90,12 @@
 	box-sizing: border-box;
 }
 
+.page {
+	background: gold;
+	height: 300vw;
+	width: 100%;
+}
+
+img {
+	background: gold;
+}

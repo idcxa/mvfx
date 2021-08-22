@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './colours';
+
 body, html {
 	background-color: #272838;
 	color: #F9F8F8;
@@ -15,4 +17,17 @@ body, html {
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 	monospace;
+}
+
+h1 {
+	font-size: 8vw;
+	text-align: center;
+	color: $alice-blue;
+}
+
+h2 {
+	font-size: 6vw;
+	text-align: center;
+	color: $alice-blue;
+	//padding-bottom: 20vw;
 }

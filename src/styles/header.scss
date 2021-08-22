@@ -1,0 +1,26 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 20vw;
+  max-height: 150px;
+  background-color: black;
+  padding-bottom: 2rem;
+  font-weight: 700;
+  .head {
+    a {
+      padding: 0.5vw;
+      font-size: clamp(25px, 75px, 6vw);
+    }
+  }
+  .tail {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    a {
+      padding: 1rem;
+      padding-bottom: 0;
+    }
+  }
+}
+
