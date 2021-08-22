@@ -1,0 +1,221 @@
+@import "./colours";
+
+.page {
+  padding-top: min(20vw, 150px);
+  height: 500vw;
+  width: 100%;
+  background: #000;
+}
+
+.gallery {
+  padding: min(10vw, 75px);
+  padding-top: 0vw;
+}
+
+.text {
+  //margin-top: min(10vw, 75px);
+  padding: 5vw;
+  padding-top: 2vw;
+  background: #000;
+  h1 {
+    font-size: clamp(25px, 88px, 8vw);
+    color: #ffc03a;
+  }
+  h2 {
+    font-size: clamp(25px, 75px, 2vw);
+    padding: 1vw;
+    font-weight: 400;
+  }
+  p {
+    font-weight: 300;
+    padding: 10vw;
+    padding-top: 1vw;
+    padding-bottom: 2vw;
+    text-align: center;
+  }
+}
+
+/* Parallax base styles
+  --------------------------------------------- */
+
+.parallax {
+  position: relative;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
+  filter: alpha(opacity=50); /* IE 5-7 */
+  -moz-opacity: 0.85; /* Netscape */
+  -khtml-opacity: 0.5; /* Safari 1.x */
+  opacity: 0.85; /* Good browsers */
+}
+
+.parallax::-webkit-scrollbar {
+  display: none;
+}
+.parallax__layer {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 99;
+}
+
+.parallax__layer--back {
+  -webkit-transform: translateZ(-4px) scale(1);
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  height: 1200px;
+  .img1 {
+    background: gold;
+    width: 100%;
+
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+/* demo styles
+  --------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 100% / 1.5 Arial;
+}
+
+/* centre the content in the parallax layers */
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*
+.parallax {
+  background-image: url("https://source.unsplash.com/2ShvY8Lf6l0/800x599");
+
+  height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: visible;
+}
+*/
+
+img {
+  display: block;
+  margin: auto;
+  background: black;
+}
+
+/* products */
+.product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40vw;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4vw;
+  padding-left: 10vw;
+  .item {
+    color: #113;
+    margin: 10px;
+    padding: 30px;
+    border: 2px solid;
+    border-radius: 8px;
+    background: $cambridge-blue;
+  }
+  .item:hover {
+    background: $pale-spring;
+  }
+}
+
+.div1 {
+  padding: 5%;
+}
+
+.cell {
+  padding-left: 20%;
+}
+/* table */
+.tbl {
+  border: 1px solid white;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  border: 1px solid white;
+  display: flex;
+  min-height: 50px;
+  padding: 1.5vh;
+}
+
+%cell-shared {
+  font-size: 1.2rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  @media screen and (min-width: 200px) {
+    font-size: 1.9rem;
+  }
+}
+.cell {
+  flex: 5;
+  margin: auto;
+  justify-content: center;
+  min-width: 20%;
+  text-align: center;
+  @media screen and (min-width: 200px) {
+    font-size: 1.125rem;
+  }
+
+  h2 {
+    //@extend %cell-shared;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  h3 {
+    //@extend %cell-shared;
+    font-size: 0.8em;
+  }
+}
+
+.row:first-child .cell {
+  display: flex;
+  justify-content: center; /*  center horiz. */
+  align-items: center; /*  center vert. */
+}
+.row .cell {
+  padding: 5px;
+  box-sizing: border-box;
+}

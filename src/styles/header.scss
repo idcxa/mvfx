@@ -1,13 +1,14 @@
 .header {
+  overflow: visible;
   width: 100%;
   min-height: 6vh;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #eee;
   //transition: all 0.7s ease-in;
   position: fixed;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;

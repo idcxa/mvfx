@@ -2,32 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './colours';
+@import "./colours";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
-body, html {
-	background-color: #272838;
-	color: #F9F8F8;
-	//font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
-	font-family: 'Roboto', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 1.125rem;
+body,
+html {
+  background-color: #000;
+  color: #f9f8f8;
+  //font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.125rem;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-	monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 h1 {
-	font-size: 8vw;
-	text-align: center;
-	color: $alice-blue;
+  font-size: 8vw;
+  text-align: center;
+  color: $alice-blue;
 }
 
 h2 {
-	font-size: 6vw;
-	text-align: center;
-	color: $alice-blue;
-	//padding-bottom: 20vw;
+  font-size: 6vw;
+  text-align: center;
+  color: $alice-blue;
+  //padding-bottom: 20vw;
 }
