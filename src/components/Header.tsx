@@ -1,13 +1,22 @@
+import '../styles/header.scss'
+
 export default function Header() {
 	return (
 		<>
-			<nav className='flex flex-row-wrap p-2'>
-				<div className='flex-start'>
-				<a className="text-2xl text-purple" href="/">Job Pricing</a>
-				<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span className="navbar-toggler-icon"></span>
-				</button>
-			</div>
+			<nav>
+				<div className='head'>
+					<a className="text-2xl text-purple" href="/">MVFX LTD.</a>
+					<button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span className="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<div className='tail'>
+					<a href='/work'>Work</a>
+					<a href='/about'>About</a>
+					<a href='/products'>Products</a>
+					<a href='/book'>Book now</a>
+					<a href='/Contact'>Contact</a>
+				</div>
 			</nav>
 		</>
 	)

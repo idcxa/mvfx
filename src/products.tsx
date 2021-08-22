@@ -29,7 +29,6 @@ const products = [
 ]
 
 export default function Products() {
-
 	const [checkedState, setCheckedState] = useState(
 		new Array(products.length).fill(Array(4).fill(false))
 	);
