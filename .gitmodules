@@ -1,0 +1,3 @@
+[submodule "src/react-photo-gallery"]
+	path = src/react-photo-gallery
+	url = https://gitlab.com/izzuishere/react-photo-gallery
