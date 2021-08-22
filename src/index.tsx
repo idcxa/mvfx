@@ -4,7 +4,7 @@ import './index.scss'
 import App from './App'
 //import Products from './products'
 import reportWebVitals from './reportWebVitals'
-import SRL from 'simple-react-lightbox'
+//import SRL from 'simple-react-lightbox'
 
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -12,9 +12,7 @@ import Footer from './components/Footer'
 ReactDOM.render(
   <React.StrictMode>
     <Header />
-    <SRL>
-      <App />
-    </SRL>
+    <App />
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')
