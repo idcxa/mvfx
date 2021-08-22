@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
-//import App from './App'
-import Products from './products'
 import App from './App'
+//import Products from './products'
 import reportWebVitals from './reportWebVitals'
 import SRL from 'simple-react-lightbox'
 
