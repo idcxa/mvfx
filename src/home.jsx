@@ -86,7 +86,11 @@ export default function App() {
           />
         </div>
         <div class='parallax__layer parallax__layer--base'>
-          <h1>See my work</h1>
+          <div className='button'>
+            <a href='/work'>
+              <h1>See my Designs</h1>
+            </a>
+          </div>
         </div>
       </div>
       <div className='parallax__layer--base'>
