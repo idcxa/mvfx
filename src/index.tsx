@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
-import Home from "./Home";
+import "./css/index.scss";
+import Home from "./home";
 //import Products from './products'
 import reportWebVitals from "./reportWebVitals";
 //import SRL from 'simple-react-lightbox'
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 ReactDOM.render(
   <React.StrictMode>
