@@ -11,7 +11,7 @@
     padding: 2vw;
   }
   h2 {
-    font-size: clamp(25px, 75px, 2vw);
+    font-size: clamp(25px, 75px, 4vw);
     padding: 1vw;
     font-weight: 400;
   }
@@ -35,6 +35,7 @@
   //margin-top: min(10vw, 75px);
   padding: 6vw;
   padding-bottom: 4vw;
+  padding-top: 0vw;
   background: #000;
 }
 
@@ -50,6 +51,38 @@
     height: 30vw;
     max-height: 300px;
     width: auto;
+  }
+}
+
+.orange {
+  padding-top: 2vh;
+  background: #ffc03a;
+  justify-content: space-around;
+  align-content: space-between;
+  color: black;
+  h1 {
+    color: black;
+  }
+  a {
+    display: flex;
+    width: 30vh;
+    height: 30vh;
+    padding-top: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    white-space: nowrap;
+    text-align: center;
+    margin: 1em 0;
+    img {
+      padding: 2vh;
+      vertical-align: middle;
+      width: auto;
+      height: auto;
+      background: #ffc03a;
+    }
+  }
+  .a:hover {
+    background-color: red;
   }
 }
 
@@ -151,7 +184,8 @@
 
 .parallax__group {
   position: relative;
-  height: min(100vw, 800px);
+  width: 100vw;
+  height: 56vw;
   transform-style: preserve-3d;
   z-index: -5;
   top: 0;
@@ -160,6 +194,9 @@
   parallax__layer--back {
     position: absolute;
   }
+}
+.size2 {
+  height: 30vw;
 }
 
 .parallax__layer--base {
@@ -172,8 +209,9 @@
   -webkit-transform: translateZ(-4px) scale(1);
   transform: translateZ(-1px) scale(2);
   z-index: -5;
-  height: 60vw;
-  filter: brightness(60%);
+  width: 100%;
+  height: auto;
+  filter: brightness(70%);
   .img1 {
     background: white;
     width: 100%;
@@ -185,7 +223,20 @@
     background-size: cover;
     overflow: visible;
   }
+  .img1:hover {
+    background: gold;
+    width: 100vw;
+    height: 56vw;
+
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: visible;
+  }
   img {
+    background: black;
     display: block;
     width: 100%;
     height: auto;

@@ -1,0 +1,9 @@
+- get proper images for gallery
+- finish home page
+  - testimonials
+- get cass header
+- make footer work and get cass footer
+- work page (just a big gallery)
+- products page
+- booking page
+- contact page
