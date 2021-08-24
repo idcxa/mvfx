@@ -123,6 +123,53 @@ export function Images(props) {
   )
 }
 
+export function Testimonials() {
+  const testimonialsText = [
+    {
+      name: 'Anna Rewinska',
+      company: 'Blue Drop Studio',
+      text: "Another very successful project and amazing quality of work & communication\nWe're looking forward to the future collaborations. James is an exceptional talent!",
+      url: 'https://www.bluedropstudio.com/',
+      image:
+        'https://uploads-ssl.webflow.com/5daccd454c72ccc568f28d6c/5eb1577f8a376a00e94573d2_Blue%20Drop%20Logo%20Black.svg',
+    },
+    {
+      name: 'Andre Fairweather',
+      company: 'Rock Oil',
+      text: "Top work as usual! James has an eye for detail and appreciates the look we're going for with our products.\nExcellent job and will be going back to him in future for other 3d modelling work.",
+      url: 'https://www.rockoil.co.uk/cm/',
+      image:
+        'https://static.wixstatic.com/media/eaaebe_62eed3070dec40758a79e6e2783abd80~mv2.png/v1/fill/w_220,h_138,al_c,q_85,usm_0.66_1.00_0.01/ROCK_OIL_LOGO.webp',
+    },
+    {
+      name: 'Abdullah Green',
+      company: "Green's Steel",
+      text: 'Love working with James. He always delivers great renders, high quality and very accurate.\nDefinitely recommend!',
+      url: 'https://greenssteel.com/',
+      image:
+        'https://static.wixstatic.com/media/eaaebe_baf7d91906a148dabd1aeb0c9157af64~mv2.png/v1/fill/w_220,h_94,al_c,q_85,usm_0.66_1.00_0.01/GREENS_LOGO.webp',
+    },
+  ]
+  return (
+    <div className='testimonials'>
+      {testimonialsText.map((x) => (
+        <div>
+          <p className='text'>
+            {x.text.split('\n').map((str) => (
+              <p>{str}</p>
+            ))}
+          </p>
+          <h3 className='name'>{x.name}</h3>
+          <a href={x.url}>
+            <img src={x.image} alt={x.image}></img>
+          </a>
+          {/*<p className='company'>{x.company}</p>*/}
+        </div>
+      ))}
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <div className='page parallax'>
@@ -147,7 +194,7 @@ export default function Home() {
         <div className='text-flex'>
           <img src='/logo.webp' alt='high-quality render' />
           <div>
-            <h1>James Moss, CEO and lead designer</h1>
+            <h2>James Moss, CEO and lead designer</h2>
             <p>
               As a CGI artist, being passionate and motivated about my work is
               important. It's what has lead me to a number of incredible
@@ -170,13 +217,13 @@ export default function Home() {
         <div class='parallax__layer parallax__layer--base'>
           <div className='button'>
             <NavLink to='/products'>
-              <h1>See all his previous work</h1>
+              <h2>See all his previous work</h2>
             </NavLink>
           </div>
         </div>
       </div>
       <div className='parallax__layer--base'>
-        <div className='orange'>
+        <div className='text orange'>
           <h1>Clients</h1>
           <p>
             Since 2008, my design services have earned me an outstanding
@@ -184,7 +231,7 @@ export default function Home() {
             the way. Check out my client list to get inspired by clicking on
             their logos and contact me today for more information.
           </p>
-          <div className='text-flex orange'>
+          <div className='clients'>
             {clients.map((x) => {
               return (
                 <>
@@ -207,24 +254,15 @@ export default function Home() {
         <div class='parallax__layer parallax__layer--base'>
           <div className='button'>
             <a href='/booking'>
-              <h1>Book Now</h1>
+              <h2>Book Now</h2>
             </a>
           </div>
         </div>
       </div>
-      <div className='text-flex'>
-        <img src='/logo.webp' alt='high-quality render' />
+      <div className='text'>
         <div>
-          <h1>James Moss, CEO and lead designer</h1>
-          <p>
-            As a CGI artist, being passionate and motivated about my work is
-            important. It's what has lead me to a number of incredible projects
-            and roles over the past 15 years, having gained a good amount of
-            experience, I hope to use those skills to provide a service tailored
-            to your 3d needs. I love the personal challenges a new project
-            provides and I relish the opportunity to develop a new technique or
-            skill
-          </p>
+          <h2 style={{ paddingTop: '4vh' }}>See what others think</h2>
+          <Testimonials />
         </div>
       </div>
     </div>
