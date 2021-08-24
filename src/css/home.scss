@@ -42,7 +42,7 @@
 .text-flex {
   padding-top: 4vh;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   img {
     height: 30vw;
@@ -148,6 +148,17 @@
     flex-direction: column;
     div {
       width: 100%;
+    }
+  }
+  .text-flex {
+    padding-top: 4vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    img {
+      height: 30vw;
+      max-height: 300px;
+      width: auto;
     }
   }
 }
