@@ -1,4 +1,6 @@
 import { useState, useCallback } from 'react'
+import { NavLink } from 'react-router-dom'
+
 import Gallery from 'react-photo-gallery'
 import Carousel, { Modal, ModalGateway } from 'react-images'
 import { photos } from './components/photos'
@@ -11,7 +13,7 @@ export const clients = [
       'https://static.wixstatic.com/media/eaaebe_ad29920dd1e449a891b44a4fecfe754b~mv2.png/v1/fill/w_220,h_162,al_c,q_85,usm_0.66_1.00_0.01/SA_LOGO.webp',
   },
   {
-    url: '',
+    url: 'https://static.wixstatic.com/media/eaaebe_65c0e1d5e3b24b969aa79066af459ea7~mv2.png/v1/fill/w_220,h_30,al_c,q_85,usm_0.66_1.00_0.01/BERBERRY_LOGO.webp',
     image:
       'https://static.wixstatic.com/media/eaaebe_65c0e1d5e3b24b969aa79066af459ea7~mv2.png/v1/fill/w_220,h_30,al_c,q_85,usm_0.66_1.00_0.01/BERBERRY_LOGO.webp',
   },
@@ -36,7 +38,7 @@ export const clients = [
       'https://static.wixstatic.com/media/eaaebe_baf7d91906a148dabd1aeb0c9157af64~mv2.png/v1/fill/w_220,h_94,al_c,q_85,usm_0.66_1.00_0.01/GREENS_LOGO.webp',
   },
   {
-    url: '',
+    url: 'https://static.wixstatic.com/media/eaaebe_418cf961139e410b96d6950bd9e66629~mv2.png/v1/fill/w_220,h_69,al_c,q_85,usm_0.66_1.00_0.01/DANONE_LOGO.webp',
     image:
       'https://static.wixstatic.com/media/eaaebe_418cf961139e410b96d6950bd9e66629~mv2.png/v1/fill/w_220,h_69,al_c,q_85,usm_0.66_1.00_0.01/DANONE_LOGO.webp',
   },
@@ -61,7 +63,7 @@ export const clients = [
       'https://static.wixstatic.com/media/eaaebe_13d0659ec2bb46cb907bccecc5513c99~mv2.png/v1/fill/w_220,h_182,al_c,q_85,usm_0.66_1.00_0.01/TTC_LOGO.webp',
   },
   {
-    url: '',
+    url: 'https://static.wixstatic.com/media/eaaebe_b0cfed0029734bb095357685f73e971c~mv2.png/v1/fill/w_220,h_37,al_c,q_85,usm_0.66_1.00_0.01/WATT_LOGO.webp',
     image:
       'https://static.wixstatic.com/media/eaaebe_b0cfed0029734bb095357685f73e971c~mv2.png/v1/fill/w_220,h_37,al_c,q_85,usm_0.66_1.00_0.01/WATT_LOGO.webp',
   },
@@ -76,12 +78,12 @@ export const clients = [
       'https://static.wixstatic.com/media/eaaebe_316419ff03224b12afb8331698398d19~mv2.png/v1/fill/w_156,h_200,al_c,q_85,usm_0.66_1.00_0.01/CBD_ONE.webp',
   },
   {
-    url: '',
+    url: 'https://static.wixstatic.com/media/eaaebe_fb2c3c0daa2b4ddc8d714199ee1c532d~mv2.png/v1/fill/w_220,h_30,al_c,q_85,usm_0.66_1.00_0.01/EASTBROOK_LOGO.webp',
     image:
       'https://static.wixstatic.com/media/eaaebe_fb2c3c0daa2b4ddc8d714199ee1c532d~mv2.png/v1/fill/w_220,h_30,al_c,q_85,usm_0.66_1.00_0.01/EASTBROOK_LOGO.webp',
   },
   {
-    url: '',
+    url: 'https://static.wixstatic.com/media/eaaebe_fad7055c0fbb44459204bca61cbac466~mv2.png/v1/fill/w_220,h_82,al_c,q_85,usm_0.66_1.00_0.01/SPRING_LOGO.webp',
     image:
       'https://static.wixstatic.com/media/eaaebe_fad7055c0fbb44459204bca61cbac466~mv2.png/v1/fill/w_220,h_82,al_c,q_85,usm_0.66_1.00_0.01/SPRING_LOGO.webp',
   },
@@ -121,10 +123,7 @@ export function Images(props) {
   )
 }
 
-export default function App() {
-  var pimage = {
-    backgroundImage: "url('https://source.unsplash.com/2ShvY8Lf6l0/800x599')",
-  }
+export default function Home() {
   return (
     <div className='page parallax'>
       <div className='parallax__layer--base'>
@@ -170,9 +169,9 @@ export default function App() {
         </div>
         <div class='parallax__layer parallax__layer--base'>
           <div className='button'>
-            <a href='/work'>
+            <NavLink to='/products'>
               <h1>See all his previous work</h1>
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

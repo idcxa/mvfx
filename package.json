@@ -53,6 +53,7 @@
   },
   "devDependencies": {
     "@types/photoswipe": "^4.1.2",
+    "@types/react-router-dom": "^5.1.8",
     "@types/simple-react-lightbox": "^3.6.1"
   }
 }
