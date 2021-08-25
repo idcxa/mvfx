@@ -187,12 +187,20 @@ export default function Home() {
             complex scenes, your product will be built in a productive, high
             quality and rapid development environment.
           </p>
+          <div className='gallery'>
+            <Images images={photos} />
+          </div>
         </div>
-        <div className='gallery'>
-          <Images images={photos} />
+      </div>
+      <div class='parallax__group'>
+        <div class='parallax__layer parallax__layer--back'>
+          <img
+            src='https://static.wixstatic.com/media/eaaebe_53e83084ad3b4164957d7a383d307659~mv2.jpg/v1/fill/w_780,h_780,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01/eaaebe_53e83084ad3b4164957d7a383d307659~mv2.webp'
+            alt='high-quality render'
+          />
         </div>
-        <div className='text-flex'>
-          <img src='/logo.webp' alt='high-quality render' />
+        <div class='parallax__layer parallax__layer--base text-flex'>
+          <img src='/logo.png' alt='high-quality render' />
           <div>
             <h2>James Moss, CEO and lead designer</h2>
             <p>
@@ -204,21 +212,6 @@ export default function Home() {
               a new project provides and I relish the opportunity to develop a
               new technique or skill
             </p>
-          </div>
-        </div>
-      </div>
-      <div class='parallax__group'>
-        <div class='parallax__layer parallax__layer--back'>
-          <img
-            src='https://static.wixstatic.com/media/eaaebe_53e83084ad3b4164957d7a383d307659~mv2.jpg/v1/fill/w_780,h_780,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01/eaaebe_53e83084ad3b4164957d7a383d307659~mv2.webp'
-            alt='high-quality render'
-          />
-        </div>
-        <div class='parallax__layer parallax__layer--base'>
-          <div className='button'>
-            <NavLink to='/products'>
-              <h2>See all his previous work</h2>
-            </NavLink>
           </div>
         </div>
       </div>
