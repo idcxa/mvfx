@@ -1,7 +1,7 @@
 @import './colours';
 
 .page {
-  padding-top: min(20vw, 150px);
+  //padding-top: min(20vw, 150px);
   height: 500vw;
   width: 100%;
   background: #000;
@@ -19,10 +19,10 @@
 
 .text,
 .text-flex {
+  background: black;
   padding: 0;
-  padding-bottom: 4vh;
+  padding-bottom: 0vh;
   padding-top: 0vh;
-  background: #000;
   h1 {
     padding: 4vh;
     padding-top: 0vh;
@@ -40,11 +40,12 @@
 }
 
 .text-flex {
-  padding-top: 4vh;
+  background: none;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   img {
+    margin-left: 4vh;
     height: 30vw;
     max-height: 300px;
     width: auto;
@@ -142,27 +143,6 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .testimonials {
-    flex-wrap: wrap;
-    flex-direction: column;
-    div {
-      width: 100%;
-    }
-  }
-  .text-flex {
-    padding-top: 4vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    img {
-      height: 30vw;
-      max-height: 300px;
-      width: auto;
-    }
-  }
-}
-
 .button {
   height: 100%;
   display: flex;
@@ -206,7 +186,7 @@
   --------------------------------------------- */
 
 .parallax {
-  position: relative;
+  position: absolute;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -218,7 +198,6 @@
   display: none;
 }
 .parallax__layer {
-  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -228,7 +207,7 @@
 .parallax__group {
   position: relative;
   width: 100vw;
-  height: 56vw;
+  height: 70%;
   transform-style: preserve-3d;
   z-index: -5;
   top: 0;
@@ -249,12 +228,12 @@
 }
 
 .parallax__layer--back {
-  -webkit-transform: translateZ(-4px) scale(1);
+  position: relative;
+  -webkit-transform: translateZ(-1px) scale(2);
   transform: translateZ(-1px) scale(2);
   z-index: -5;
   width: 100%;
-  height: auto;
-  filter: brightness(70%);
+  filter: blur(1px) brightness(60%);
   .img1 {
     background: #fff;
     width: 100%;
@@ -329,7 +308,6 @@ body {
 img {
   display: block;
   margin: auto;
-  background: black;
 }
 
 /* products */
@@ -419,4 +397,29 @@ img {
 .row .cell {
   padding: 5px;
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonials {
+    flex-wrap: wrap;
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+  }
+  .text-flex {
+    flex-direction: column;
+    justify-content: flex-start;
+    img {
+      margin: 0;
+      margin-top: 4vh;
+    }
+  }
+  .parallax__group {
+    height: calc(150vw + 5vh);
+    .parallax__layer--back {
+      -webkit-transform: translateZ(-1px) scale(4);
+      transform: translateZ(-1px) scale(4);
+    }
+  }
 }
