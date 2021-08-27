@@ -1,9 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@import './colours';
-
 body,
 html {
   background-color: #000;
@@ -38,9 +32,9 @@ h2 {
 }
 
 h3 {
-  font-family: 'Roboto', sans-serif;
-  font-size: min(7vw, 26px);
-  font-weight: 500;
+  font-family: 'Cabin', sans-serif;
+  font-size: min(7vw, 28px);
+  font-weight: 600;
 }
 
 p {
