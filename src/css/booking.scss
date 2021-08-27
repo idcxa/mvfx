@@ -1,0 +1,59 @@
+.div1 {
+  padding: 5%;
+}
+
+.cell {
+  padding-left: 20%;
+}
+/* table */
+.tbl {
+  border: 1px solid white;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  border: 1px solid white;
+  display: flex;
+  min-height: 50px;
+  padding: 1.5vh;
+}
+
+%cell-shared {
+  font-size: 1.2rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  @media screen and (min-width: 200px) {
+    font-size: 1.9rem;
+  }
+}
+.cell {
+  flex: 5;
+  margin: auto;
+  justify-content: center;
+  min-width: 20%;
+  text-align: center;
+  @media screen and (min-width: 200px) {
+    font-size: 1.125rem;
+  }
+
+  h2 {
+    //@extend %cell-shared;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  h3 {
+    //@extend %cell-shared;
+    font-size: 0.8em;
+  }
+}
+
+.row:first-child .cell {
+  display: flex;
+  justify-content: center; /*  center horiz. */
+  align-items: center; /*  center vert. */
+}
+.row .cell {
+  padding: 5px;
+  box-sizing: border-box;
+}
