@@ -1,115 +1,139 @@
-@import './colours';
-
 .page {
   //padding-top: min(20vw, 150px);
-  height: 500vw;
-  width: 100%;
-  background: #000;
-  z-index: 100;
+  background: #242424;
   h1 {
     color: #ffc03a;
   }
 }
 
-.gallery {
-  //padding: min(10vw, 75px);
-  padding: 2px;
-  background: black;
-  z-index: 99;
-}
-
-.text,
+.text-image,
 .text-flex {
-  position: relative;
-  background: black;
   padding: 0;
-  padding-bottom: 0vh;
-  padding-top: 0vh;
-  h1 {
-    padding: 4vh;
-    padding-top: 0vh;
-    padding-bottom: 0vh;
-  }
-  .button {
-    margin-left: 4vh;
-    margin-right: 4vh;
-  }
-  h2 {
-    padding: 4vh;
-    padding-top: 0vh;
-    padding-bottom: 0vh;
-  }
-  p {
-    padding: 4vh;
-    padding-top: 2vh;
-  }
-  .b2 {
-    padding: 6vh;
-    margin-top: 0vh;
-    margin-bottom: 0vh;
-  }
+  width: 100%;
 }
 
-.text-flex {
-  background: none;
-  width: 100vw;
-  height: 100%;
-  padding-top: auto;
-  padding-bottom: auto;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  h2 {
-    padding-top: 4vh;
+.text-image {
+  display: inline-flex;
+  max-height: calc(800px - 20vw);
+  background: black;
+  div {
+    max-width: 50%;
+    overflow: hidden;
+    position: relative;
+    p {
+      padding: 0 6vw 4vw 6vw;
+    }
   }
-  p {
-    word-wrap: break-word;
+  .imagecontainer {
+    display: inline-block;
+    overflow: scroll;
+    height: 100%;
   }
   img {
-    margin-left: 2vh;
-    height: 30vw;
-    max-height: 500px;
-    width: auto;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
-.orange {
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  background: #ffc03a;
-  color: black;
-  h1 {
-    color: black;
-  }
-}
-
-.clients {
-  height: 100%;
+.text-flex {
+  background: #242424;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: space-between;
-  a {
-    display: flex;
-    width: 30vh;
-    height: auto;
-    max-width: 30vw;
-    padding-top: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    white-space: nowrap;
-    text-align: center;
+  max-height: 100%;
+  align-items: center;
+  .txtcontainer {
+    background: #242424;
+    padding: 0 6vw 4vw 6vw;
+  }
+  .imgcontainer {
+    display: inline-block;
+    overflow: hidden;
+    height: 100%;
+    max-width: 20%;
+    margin: 4vh;
+    background: #242424;
     img {
-      padding: 2vh;
-      vertical-align: middle;
+      object-fit: cover;
       width: 100%;
-      height: auto;
-      background: #ffc03a;
+      height: 100%;
     }
   }
 }
 
-.testimonials {
+.slideshow {
+  img {
+    width: 100%;
+    height: auto;
+    filter: brightness(90%);
+  }
+}
+
+.gallery {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  height: min(50vw, 500px);
+  div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+    }
+    img:hover {
+      filter: brightness(50%);
+    }
+  }
+  .arrow {
+    position: absolute;
+    z-index: 80;
+    height: 20%;
+    width: 20%;
+    filter: drop-shadow(-2px 3px 0.15rem black);
+  }
+  #right {
+    left: 86%;
+  }
+  #left {
+    left: -6%;
+  }
+  .arrow:active {
+    filter: brightness(99%) drop-shadow(0px 0px 0.1rem black);
+  }
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.head {
+  h2 {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    margin: 0 auto; /* Center the text container */
+    padding: 10px;
+    width: 50%;
+    text-align: center; /* Center text */
+    position: absolute; /* Position text */
+    left: 50%; /* Position text in the middle */
+    transform: translate(-50%, -50%); /* Position text in the middle */
+    mix-blend-mode: screen; /* This makes the cutout text possible */
+    background-color: black;
+    color: white;
+    mix-blend-mode: multiply;
+  }
+}
+
+.services {
   background-color: black;
   display: flex;
   flex-direction: row;
@@ -168,214 +192,146 @@
   }
 }
 
-.button {
-  height: auto;
-  width: 60%;
-  margin: 2vh;
-  margin-left: auto;
-  margin-right: auto;
-  display: inline-flex;
-  justify-content: center;
-  align-items: flex-start;
-  align-self: center;
-  background-color: #ffc03a;
-  padding: min(2vw, 25px);
-  text-decoration: none;
-  color: black;
-  -webkit-transition: all 200ms ease-in;
-  -ms-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-  border-radius: 10px;
-  span {
-    font-weight: 500;
-    align-self: center;
-    text-align: center;
-    font-size: 2.25vw;
-  }
-  img {
-    fill: #fff;
-  }
-}
-
-.button:hover {
-  -webkit-transition: all 200ms ease-in;
-  -ms-transition: all 200ms ease-in;
-  transition: all 200ms ease-in;
-  background: #eee;
-  h2 {
-    color: black;
-  }
-}
-
-#button2 {
-  width: 100%;
-  margin: 6vh;
-  margin-bottom: 1vh;
-  margin-left: 0;
-}
-
-/* Parallax base styles
-  --------------------------------------------- */
+/* PARALLAX CLASSES */
 
 .parallax {
+  height: 500px; /* fallback for older browsers */
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  -webkit-perspective: 1px;
-  perspective: 1px;
+  -webkit-perspective: 300px;
+  perspective: 300px;
 }
 
-.parallax::-webkit-scrollbar {
-  display: none;
-}
-.parallax__layer {
+.parallaxGroup {
   position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallaxLayer {
+  position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
 }
 
-.parallax__group {
-  //transform: translate3d(200px, 200px, -0px) rotateY(0.05deg);
-  position: relative;
-  width: 100vw;
-  height: 100%;
-  transform-style: preserve-3d;
-  z-index: -5;
-  top: 0;
-  bottom: 0;
-  .parallax__layer--base {
+.layerBase {
+  transform: translateZ(0px);
+}
+
+.layerBack {
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+}
+
+#group1 {
+  height: 60vw;
+  z-index: 60;
+  .layerBack {
+    -webkit-transform: translateZ(-200px) scale(2);
+    transform: translateZ(-200px) scale(2);
     position: absolute;
+    height: 100%;
+    top: -100%;
+  }
+  .parallaxGroup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 
-.size2 {
-  height: 100%;
+#group2 {
+  z-index: 80;
+  height: 80vh;
+  background: #242424;
+}
+
+/* PARALLAX CLASSES */
+
+@media only screen and (max-width: 750px) {
+  #group1 {
+    .layerBack {
+      position: absolute;
+      top: calc(100vw - 100% - 33.5vh);
+    }
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .text-flex {
+    flex-direction: column;
+    align-items: center;
+    .imgcontainer {
+      order: -1;
+      margin-bottom: 0;
+    }
+  }
+  .services {
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .text-image {
+    flex-direction: column;
+    max-height: 1000px;
+    height: auto;
+    .txtcontainer {
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      p {
+        width: 100%;
+      }
+    }
+    .imgcontainer {
+      max-width: 100%;
+      img {
+        object-fit: cover;
+        width: 100%;
+        max-height: 60vh;
+      }
+    }
+  }
+}
+
+/* Parallax base styles
+--------------------------------------------- */
+
+.parallax__group {
   position: relative;
-  z-index: -100;
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer--fore {
+  -webkit-transform: translateZ(90px) scale(0.7);
+  transform: translateZ(90px) scale(0.7);
+  z-index: 1;
 }
 
 .parallax__layer--base {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  z-index: 4;
 }
 
 .parallax__layer--back {
-  background: black;
-  -webkit-transform: translateZ(-1px) scale(2);
-  transform: translateZ(-1px) scale(2);
-  width: 100%;
-  height: 100%;
-  float: left;
-  display: flex;
-  img {
-    background: black;
-    filter: brightness(40%);
-    display: block;
-    width: 100%;
-    height: auto;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: visible;
-  }
+  -webkit-transform: translateZ(-300px) scale(2);
+  transform: translateZ(-300px) scale(2);
+  z-index: 3;
 }
 
-/* demo styles
-  --------------------------------------------- */
-@keyframes slide-3d {
-  from {
-    transform: translate3d(100px, 0px, -0px) rotateY(0.03deg);
-  }
-  to {
-    transform: translate3d(100px, 0px, -0px) rotateY(0deg);
-  }
-}
-
-#group1 {
-  z-index: 5;
-}
-
-#group2 {
-  z-index: -10;
-  //transform: translate3d(100px, 0px, -0px) rotateY(0.03deg);
-}
-
-#group3 {
-  z-index: 1;
-}
-
-img {
-  display: block;
-  margin: auto;
-}
-
-/* products */
-.product {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 40vw;
-}
-
-.list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 4vw;
-  padding-left: 10vw;
-  .item {
-    color: #113;
-    margin: 10px;
-    padding: 30px;
-    border: 2px solid;
-    border-radius: 8px;
-    background: $cambridge-blue;
-  }
-  .item:hover {
-    background: $pale-spring;
-  }
-}
-
-@media only screen and (orientation: portrait) {
-  .testimonials {
-    flex-wrap: wrap;
-    flex-direction: column;
-    div {
-      width: 100%;
-    }
-    .button {
-      width: 100%;
-    }
-  }
-  .text-flex {
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    img {
-      margin: 0;
-      margin-top: 4vh;
-    }
-  }
-  .parallax__group {
-    .parallax__layer--back {
-      position: relative;
-      -webkit-transform: translateZ(-1px) scale(4.5);
-      transform: translateZ(-1px) scale(4.5);
-    }
-  }
-}
-@media only screen and (min-width: 1800px) {
-  .gallery {
-    padding: 8vh;
-    padding-top: 0;
-  }
-  p {
-    padding-left: 4vh;
-    padding-right: 4vh;
-  }
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-600px) scale(3);
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
 }

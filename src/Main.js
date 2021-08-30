@@ -8,6 +8,7 @@ class Main extends Component {
   render() {
     return (
       <HashRouter>
+        {/*
         <header className='header'>
           <div className='head'>
             <NavLink className='text-2xl text-purple' to='/'>
@@ -31,6 +32,7 @@ class Main extends Component {
             <NavLink to='/Contact'>Contact</NavLink>
           </div>
         </header>
+        */}
         <div className='content'>
           <Route exact path='/' component={Home} />
           <Route path='/book' component={Products} />
