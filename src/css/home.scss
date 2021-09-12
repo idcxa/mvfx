@@ -1,10 +1,11 @@
 @import './colours';
 
 .page {
-  padding-top: min(20vw, 150px);
+  //padding-top: min(20vw, 150px);
   height: 500vw;
   width: 100%;
   background: #000;
+  z-index: 100;
   h1 {
     color: #ffc03a;
   }
@@ -19,14 +20,19 @@
 
 .text,
 .text-flex {
+  position: relative;
+  background: black;
   padding: 0;
-  padding-bottom: 4vh;
+  padding-bottom: 0vh;
   padding-top: 0vh;
-  background: #000;
   h1 {
     padding: 4vh;
     padding-top: 0vh;
     padding-bottom: 0vh;
+  }
+  .button {
+    margin-left: 4vh;
+    margin-right: 4vh;
   }
   h2 {
     padding: 4vh;
@@ -37,16 +43,32 @@
     padding: 4vh;
     padding-top: 2vh;
   }
+  .b2 {
+    padding: 6vh;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
+  }
 }
 
 .text-flex {
-  padding-top: 4vh;
+  background: none;
+  width: 100vw;
+  height: 100%;
+  padding-top: auto;
+  padding-bottom: auto;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  h2 {
+    padding-top: 4vh;
+  }
+  p {
+    word-wrap: break-word;
+  }
   img {
+    margin-left: 2vh;
     height: 30vw;
-    max-height: 300px;
+    max-height: 500px;
     width: auto;
   }
 }
@@ -62,6 +84,7 @@
 }
 
 .clients {
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -70,7 +93,7 @@
     display: flex;
     width: 30vh;
     height: auto;
-    max-width: 33vw;
+    max-width: 30vw;
     padding-top: auto;
     margin-top: auto;
     margin-bottom: auto;
@@ -79,7 +102,7 @@
     img {
       padding: 2vh;
       vertical-align: middle;
-      width: auto;
+      width: 100%;
       height: auto;
       background: #ffc03a;
     }
@@ -87,6 +110,7 @@
 }
 
 .testimonials {
+  background-color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -94,6 +118,7 @@
   width: 100%;
   color: black;
   padding: 6vh;
+  padding-top: 2vh;
   h2 {
     text-align: center;
     color: #fff;
@@ -135,6 +160,7 @@
         padding: 2vw;
         vertical-align: middle;
         width: 60%;
+        max-width: 200px;
         height: auto;
         background: #fff;
       }
@@ -142,55 +168,24 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .testimonials {
-    flex-wrap: wrap;
-    flex-direction: column;
-    div {
-      width: 100%;
-    }
-  }
-  .text-flex {
-    padding-top: 4vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    img {
-      height: 30vw;
-      max-height: 300px;
-      width: auto;
-    }
-  }
-}
-
 .button {
-  height: 100%;
-  display: flex;
+  height: auto;
+  width: 60%;
+  margin: 2vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-flex;
   justify-content: center;
   align-items: flex-start;
-  a {
-    align-self: center;
-    width: 100%;
-    background-color: black;
-    width: auto;
-    padding: min(2vw, 25px);
-    border: none;
-    text-decoration: none;
-    color: $alice-blue;
-    -webkit-transition: all 200ms ease-in;
-    -ms-transition: all 200ms ease-in;
-    transition: all 200ms ease-in;
-    border-radius: 16px;
-  }
-  a:hover {
-    -webkit-transition: all 200ms ease-in;
-    -ms-transition: all 200ms ease-in;
-    transition: all 200ms ease-in;
-    background: #eee;
-    h2 {
-      color: black;
-    }
-  }
+  align-self: center;
+  background-color: #ffc03a;
+  padding: min(2vw, 25px);
+  text-decoration: none;
+  color: black;
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  border-radius: 10px;
   span {
     font-weight: 500;
     align-self: center;
@@ -202,11 +197,27 @@
   }
 }
 
+.button:hover {
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  background: #eee;
+  h2 {
+    color: black;
+  }
+}
+
+#button2 {
+  width: 100%;
+  margin: 6vh;
+  margin-bottom: 1vh;
+  margin-left: 0;
+}
+
 /* Parallax base styles
   --------------------------------------------- */
 
 .parallax {
-  position: relative;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -226,60 +237,41 @@
 }
 
 .parallax__group {
+  //transform: translate3d(200px, 200px, -0px) rotateY(0.05deg);
   position: relative;
   width: 100vw;
-  height: 56vw;
+  height: 100%;
   transform-style: preserve-3d;
   z-index: -5;
   top: 0;
   bottom: 0;
-  .parallax__layer--base,
-  parallax__layer--back {
+  .parallax__layer--base {
     position: absolute;
   }
 }
+
 .size2 {
-  height: 30vw;
+  height: 100%;
+  position: relative;
+  z-index: -100;
 }
 
 .parallax__layer--base {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  z-index: 10;
 }
 
 .parallax__layer--back {
-  -webkit-transform: translateZ(-4px) scale(1);
+  background: black;
+  -webkit-transform: translateZ(-1px) scale(2);
   transform: translateZ(-1px) scale(2);
-  z-index: -5;
   width: 100%;
-  height: auto;
-  filter: brightness(70%);
-  .img1 {
-    background: #fff;
-    width: 100%;
-
-    height: 200px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: visible;
-  }
-  .img1:hover {
-    background: gold;
-    width: 100vw;
-    height: 56vw;
-
-    height: 200px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: visible;
-  }
+  height: 100%;
+  float: left;
+  display: flex;
   img {
     background: black;
+    filter: brightness(40%);
     display: block;
     width: 100%;
     height: auto;
@@ -293,43 +285,31 @@
 
 /* demo styles
   --------------------------------------------- */
-
-* {
-  margin: 0;
-  padding: 0;
+@keyframes slide-3d {
+  from {
+    transform: translate3d(100px, 0px, -0px) rotateY(0.03deg);
+  }
+  to {
+    transform: translate3d(100px, 0px, -0px) rotateY(0deg);
+  }
 }
 
-body {
-  font: 100% / 1.5 Arial;
+#group1 {
+  z-index: 5;
 }
 
-/* centre the content in the parallax layers */
-.title {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+#group2 {
+  z-index: -10;
+  //transform: translate3d(100px, 0px, -0px) rotateY(0.03deg);
 }
 
-/*
-.parallax {
-  background-image: url("https://source.unsplash.com/2ShvY8Lf6l0/800x599");
-
-  height: 500px;
-
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: visible;
+#group3 {
+  z-index: 1;
 }
-*/
 
 img {
   display: block;
   margin: auto;
-  background: black;
 }
 
 /* products */
@@ -361,62 +341,41 @@ img {
   }
 }
 
-.div1 {
-  padding: 5%;
-}
-
-.cell {
-  padding-left: 20%;
-}
-/* table */
-.tbl {
-  border: 1px solid white;
-  padding: 0.8rem;
-  display: flex;
-  flex-direction: column;
-}
-.row {
-  border: 1px solid white;
-  display: flex;
-  min-height: 50px;
-  padding: 1.5vh;
-}
-
-%cell-shared {
-  font-size: 1.2rem;
-  text-align: center;
-  overflow-wrap: break-word;
-  @media screen and (min-width: 200px) {
-    font-size: 1.9rem;
+@media only screen and (orientation: portrait) {
+  .testimonials {
+    flex-wrap: wrap;
+    flex-direction: column;
+    div {
+      width: 100%;
+    }
+    .button {
+      width: 100%;
+    }
+  }
+  .text-flex {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    img {
+      margin: 0;
+      margin-top: 4vh;
+    }
+  }
+  .parallax__group {
+    .parallax__layer--back {
+      position: relative;
+      -webkit-transform: translateZ(-1px) scale(4.5);
+      transform: translateZ(-1px) scale(4.5);
+    }
   }
 }
-.cell {
-  flex: 5;
-  margin: auto;
-  justify-content: center;
-  min-width: 20%;
-  text-align: center;
-  @media screen and (min-width: 200px) {
-    font-size: 1.125rem;
+@media only screen and (min-width: 1800px) {
+  .gallery {
+    padding: 8vh;
+    padding-top: 0;
   }
-
-  h2 {
-    //@extend %cell-shared;
-    font-weight: bold;
-    font-size: 1em;
+  p {
+    padding-left: 4vh;
+    padding-right: 4vh;
   }
-  h3 {
-    //@extend %cell-shared;
-    font-size: 0.8em;
-  }
-}
-
-.row:first-child .cell {
-  display: flex;
-  justify-content: center; /*  center horiz. */
-  align-items: center; /*  center vert. */
-}
-.row .cell {
-  padding: 5px;
-  box-sizing: border-box;
 }
