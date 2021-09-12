@@ -1,9 +1,10 @@
 .page {
   //padding-top: min(20vw, 150px);
-  background: #242424;
+  background: black;
   h1 {
     color: #ffc03a;
   }
+  //padding: 6vh;
 }
 
 .text-image,
@@ -13,15 +14,21 @@
 }
 
 .text-image {
+  padding: 5vw 10px 5vw 10px;
   display: inline-flex;
-  max-height: calc(800px - 20vw);
-  background: black;
+  //max-height: calc(800px - 20vw);
+  background: #d1d1cd;
+  color: black;
   div {
     max-width: 50%;
     overflow: hidden;
     position: relative;
-    p {
-      padding: 0 6vw 4vw 6vw;
+  }
+  .txtcontainer {
+    padding: 5vh;
+    text-align: left;
+    h2 {
+      text-align: left;
     }
   }
   .imagecontainer {
@@ -33,6 +40,14 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+  }
+}
+#text2 {
+  padding: 2vh;
+  background-color: black;
+  .txtcontainer {
+    background: black;
+    color: white;
   }
 }
 
@@ -60,11 +75,19 @@
   }
 }
 
-.slideshow {
-  img {
-    width: 100%;
-    height: auto;
-    filter: brightness(90%);
+.showreel {
+  width: 100vw;
+  height: 56.25vw;
+  background-color: black;
+  h1 {
+    margin: 0;
+  }
+}
+
+.bookings {
+  background-color: gold;
+  h1 {
+    margin: 0;
   }
 }
 
@@ -73,13 +96,14 @@
   position: relative;
   align-items: center;
   justify-content: space-around;
-  height: min(50vw, 500px);
+  height: clamp(400px, 20vw, 400px);
+  width: 100%;
+  margin: 4vh 0 4vh 0;
   div {
     display: flex;
-    width: 100%;
-    height: 100%;
     justify-content: space-between;
     position: relative;
+    height: clamp(400px, 20vw, 400px);
     img {
       object-fit: cover;
       width: 100%;
@@ -116,8 +140,6 @@
 
 .head {
   h2 {
-    background-color: white;
-    color: black;
     font-weight: bold;
     margin: 0 auto; /* Center the text container */
     padding: 10px;
@@ -127,39 +149,90 @@
     left: 50%; /* Position text in the middle */
     transform: translate(-50%, -50%); /* Position text in the middle */
     mix-blend-mode: screen; /* This makes the cutout text possible */
-    background-color: black;
     color: white;
     mix-blend-mode: multiply;
   }
 }
 
-.services {
-  background-color: black;
+.bookings {
+  background-color: #d1d1cd;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
   color: black;
-  padding: 6vh;
-  padding-top: 2vh;
+  padding: 0vh 2vh 2vh 2vh;
   h2 {
     text-align: center;
-    color: #fff;
     padding: 2vh;
   }
   div {
-    margin: auto;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    background-color: black;
+    color: white;
+    margin: 4px;
     padding: 2vh;
-    width: 30%;
+    width: 100%;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
+    .text {
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      flex-grow: 10;
+      background-color: #fff;
+      font-style: italic;
+    }
+    .name {
+      font-weight: 500;
+    }
+    .company {
+      font-weight: 900;
+    }
+    a {
+      display: flex;
+      width: 100%;
+      height: auto;
+      white-space: nowrap;
+      text-align: center;
+      img {
+        padding: 2vw;
+        vertical-align: middle;
+        width: 60%;
+        max-width: 200px;
+        height: auto;
+        background: #fff;
+      }
+    }
+  }
+}
+.services {
+  background-color: #d1d1cd;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  color: black;
+  padding: 0vh 2vh 2vh 2vh;
+  h2 {
+    text-align: center;
+    padding: 2vh;
+  }
+  div {
+    background-color: black;
+    color: white;
+    margin: 4px;
+    padding: 2vh;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     .text {
       padding: 0;
       width: 100%;
@@ -227,38 +300,38 @@
 }
 
 #group1 {
-  height: 60vw;
+  height: 45vw;
   z-index: 60;
   .layerBack {
-    -webkit-transform: translateZ(-200px) scale(2);
-    transform: translateZ(-200px) scale(2);
+    -webkit-transform: translateZ(-250px) scale(2);
+    transform: translateZ(-250px) scale(2);
     position: absolute;
-    height: 100%;
-    top: -100%;
+    //top: -100%; // for 1:1 images
+    top: calc(-300px + 16vw); // for folding desk image
   }
   .parallaxGroup {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
   }
+  img {
+    width: 100%;
+  }
 }
 
 #group2 {
+  //margin: 4vw;
   z-index: 80;
   height: 80vh;
-  background: #242424;
+  background: black;
+}
+
+.margin {
+  margin: 0vh 2vw 0vh 2vw;
+  width: calc(100% - 4vw);
 }
 
 /* PARALLAX CLASSES */
-
-@media only screen and (max-width: 750px) {
-  #group1 {
-    .layerBack {
-      position: absolute;
-      top: calc(100vw - 100% - 33.5vh);
-    }
-  }
-}
 
 @media only screen and (orientation: portrait) {
   .text-flex {
@@ -280,12 +353,11 @@
 @media only screen and (max-width: 1050px) {
   .text-image {
     flex-direction: column;
-    max-height: 1000px;
     height: auto;
     .txtcontainer {
       max-width: 100%;
-      height: auto;
-      max-height: 100%;
+      height: 100%;
+      text-align: center;
       p {
         width: 100%;
       }

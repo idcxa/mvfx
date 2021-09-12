@@ -1,0 +1,222 @@
+Package Report
+
+-----------------------------------------------------------------------------
+Document:
+Name: MVFX_WEBSITE_TEMPLATE.ai
+Color Mode: CMYK color
+Color Profile: Coated FOGRA39 (ISO 12647-2:2004)
+Ruler Units: millimeters
+Artboard Dimensions: 120 mm x 300 mm
+Show Images in Outline Mode: OFF
+Highlight Substituted Fonts: OFF
+Highlight Substituted Glyphs: OFF
+Preserve Text Editability
+Simulate Colored Paper: OFF
+
+-----------------------------------------------------------------------------
+Spot Color Objects:
+
+-----------------------------------------------------------------------------
+Missing Fonts:NONE
+
+-----------------------------------------------------------------------------
+Protected Fonts that were not packaged:NONE
+
+-----------------------------------------------------------------------------
+Fonts:
+Roboto Bold (TrueType)
+Roboto Medium (TrueType)
+Roboto Light (TrueType)
+Roboto (TrueType)
+Roboto Thin (TrueType)
+Roboto Black (TrueType)
+
+-----------------------------------------------------------------------------
+Embedded Fonts:
+NONE
+
+-----------------------------------------------------------------------------
+Missing Links:
+NONE
+
+-----------------------------------------------------------------------------
+Linked Images:
+
+D:\Downloads\FOLDING_TABLE_OPEN_REV_C_SHOT_04.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 36621K, 5000 by 2500 pixels
+Dimensions: 340.157 by 170.079 points 
+Resolution: 1058.333 by 1058.333 pixels per inch
+
+
+D:\Desktop\HB_BLUE.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 18310K, 2500 by 2500 pixels
+Dimensions: 226.676 by 226.676 points 
+Resolution: 794.085 by 794.085 pixels per inch
+
+
+D:\Desktop\Portfolio Template\CBD_ONE_SIGNITURE_BLEND_GROUP_SHOT_02.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 15930K, 2500 by 2175 pixels
+Dimensions: 228.189 by 198.524 points 
+Resolution: 788.82 by 788.82 pixels per inch
+
+
+D:\Desktop\Portfolio Template\TTC_FALLER_1440x900.jpg
+Type: RGB
+Bits per Pixel: 24
+Channels: 3
+Size: 3164K, 1200 by 900 pixels
+Dimensions: 226.772 by 170.079 points 
+Resolution: 381 by 381 pixels per inch
+
+
+D:\Downloads\CW_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 1984K, 2002 by 203 pixels
+Dimensions: 53.858 by 5.461 points 
+Resolution: 2676.358 by 2676.358 pixels per inch
+
+
+D:\Downloads\DANONE_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 6514K, 2059 by 648 pixels
+Dimensions: 51.024 by 16.058 points 
+Resolution: 2905.478 by 2905.478 pixels per inch
+
+
+D:\Downloads\CAP_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 21104K, 2079 by 2079 pixels
+Dimensions: 51.024 by 51.024 points 
+Resolution: 2933.7 by 2933.7 pixels per inch
+
+
+D:\Downloads\TTC_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 6710K, 1288 by 1067 pixels
+Dimensions: 51.024 by 42.269 points 
+Resolution: 1817.511 by 1817.511 pixels per inch
+
+
+D:\Downloads\ICON_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 5481K, 2079 by 540 pixels
+Dimensions: 51.024 by 13.253 points 
+Resolution: 2933.7 by 2933.7 pixels per inch
+
+
+D:\Downloads\ROCK_OIL_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 13237K, 2079 by 1304 pixels
+Dimensions: 51.024 by 32.003 points 
+Resolution: 2933.7 by 2933.7 pixels per inch
+
+
+D:\Downloads\SA_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 15582K, 2079 by 1535 pixels
+Dimensions: 51.024 by 37.673 points 
+Resolution: 2933.7 by 2933.7 pixels per inch
+
+
+D:\Downloads\LEVO_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 13300K, 1853 by 1470 pixels
+Dimensions: 51.024 by 40.477 points 
+Resolution: 2614.789 by 2614.789 pixels per inch
+
+
+D:\Downloads\NS_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 6421K, 2071 by 635 pixels
+Dimensions: 51.024 by 15.645 points 
+Resolution: 2922.411 by 2922.411 pixels per inch
+
+
+D:\Downloads\GREENS_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 8983K, 2079 by 885 pixels
+Dimensions: 51.024 by 21.72 points 
+Resolution: 2933.7 by 2933.7 pixels per inch
+
+
+D:\Downloads\NEOS_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 900K, 408 by 452 pixels
+Dimensions: 46.057 by 51.024 points 
+Resolution: 637.822 by 637.822 pixels per inch
+
+
+D:\Downloads\CBD_ONE.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 16414K, 1617 by 2079 pixels
+Dimensions: 39.685 by 51.024 points 
+Resolution: 2933.7 by 2933.7 pixels per inch
+
+
+D:\Downloads\SPRING_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 2054K, 1060 by 397 pixels
+Dimensions: 51.024 by 19.11 points 
+Resolution: 1495.778 by 1495.778 pixels per inch
+
+
+D:\Downloads\BERBERRY_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 2645K, 2007 by 270 pixels
+Dimensions: 53.858 by 7.246 points 
+Resolution: 2683.042 by 2683.042 pixels per inch
+
+
+D:\Downloads\WATT_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 3512K, 2079 by 346 pixels
+Dimensions: 51.024 by 8.492 points 
+Resolution: 2933.7 by 2933.7 pixels per inch
+
+
+D:\Downloads\LIGHTHUB_LOGO.png
+Type: Transparent CMYK
+Bits per Pixel: 40
+Channels: 5
+Size: 4700K, 2079 by 463 pixels
+Dimensions: 53.858 by 11.994 points 
+Resolution: 2779.295 by 2779.295 pixels per inch

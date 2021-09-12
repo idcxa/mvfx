@@ -46,11 +46,6 @@ export const homepage = [
 
 export const slideshow = [
   {
-    src: 'https://static.wixstatic.com/media/eaaebe_59d0309efcaa49b28d107d971bbe3f29~mv2.jpg/v1/fit/w_600,h_600,q_90/eaaebe_59d0309efcaa49b28d107d971bbe3f29~mv2.jpg',
-    width: 1,
-    height: 1,
-  },
-  {
     src: 'images/3.jpg',
     width: 2500,
     height: 2500,
@@ -59,11 +54,6 @@ export const slideshow = [
     src: 'images/5.jpg',
     width: 4156,
     height: 4156,
-  },
-  {
-    src: 'https://static.wixstatic.com/media/eaaebe_d84672423cd746569d649bf8249b5cb7~mv2.jpg/v1/fit/w_600,h_600,q_90/eaaebe_d84672423cd746569d649bf8249b5cb7~mv2.jpg',
-    width: 1,
-    height: 1,
   },
 ]
 

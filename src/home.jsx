@@ -10,7 +10,8 @@ export default class Home extends React.Component {
       <div className='page parallax'>
         <div id='group1' className='parallaxGroup'>
           <div className='parallaxLayer layerBack'>
-            <Slideshow images={slideshow} />
+            {/*<Slideshow images={slideshow} />*/}
+            <img src='images/folding.jpeg' alt='folding desk design' />
           </div>
           <div className='parallaxLayer layerBase'>
             <div className='head'>
@@ -22,9 +23,9 @@ export default class Home extends React.Component {
         <div id='group2' className='parallaxGroup'>
           <div class='parallaxLayer layerBase'>
             {/*<Images images={homepage} />*/}
-            <div className='text-image'>
+            <div className='text-image margin'>
               <div className='txtcontainer'>
-                <h2>Intro</h2>
+                <h2>High-End Product Visualisation on Demand</h2>
                 <p>
                   James Moss is a CGI artist that specialises in product
                   visualisation and VFX, whose goal is to bring your 3d models
@@ -38,9 +39,39 @@ export default class Home extends React.Component {
                 </p>
               </div>
               <div className='imgcontainer'>
-                <img src='images/3.jpg' alt='hq render' />
+                <img
+                  src='images/CBD_ONE_SIGNITURE_BLEND_GROUP_SHOT_02.jpg'
+                  alt='hq render'
+                />
               </div>
             </div>
+            <div className='services margin'>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Magnam unde hic rem iste beatae veritatis? Molestias,
+                  quibusdam illo! Dicta, reprehenderit quibusdam enim ab ullam
+                  ea atque nemo voluptatum asperiores dolorum.
+                </p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Magnam unde hic rem iste beatae veritatis? Molestias,
+                  quibusdam illo! Dicta, reprehenderit quibusdam enim ab ullam
+                  ea atque nemo voluptatum asperiores dolorum.
+                </p>
+              </div>
+              <div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Magnam unde hic rem iste beatae veritatis? Molestias,
+                  quibusdam illo! Dicta, reprehenderit quibusdam enim ab ullam
+                  ea atque nemo voluptatum asperiores dolorum.
+                </p>
+              </div>
+            </div>
+            {/*
             <div className='text-flex'>
               <div className='txtcontainer'>
                 <h2>James Moss</h2>
@@ -61,32 +92,33 @@ export default class Home extends React.Component {
                 />
               </div>
             </div>
-            <Gallery images={homepage} items={3} />
-            <div className='services'>
-              <div>
+              */}
+            <Gallery className='pad' images={homepage} items={5} />
+            <div id='text2' className='text-image margin'>
+              <div className='txtcontainer'>
+                <h2>High-End Product Visualisation on Demand</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Magnam unde hic rem iste beatae veritatis? Molestias,
-                  quibusdam illo! Dicta, reprehenderit quibusdam enim ab ullam
-                  ea atque nemo voluptatum asperiores dolorum.
+                  James Moss is a CGI artist that specialises in product
+                  visualisation and VFX, whose goal is to bring your 3d models
+                  to life in stunning detail, as 3d visualisation is a great
+                  way, creating unique pictures or footage of your product in a
+                  cost effective way. ​ Using advanced rendering software,
+                  powered by state of the art PCs to produce convincing, high
+                  fidelity visuals and the ablity to handle large and complex
+                  scenes, your product will be built in a productive, high
+                  quality and rapid development environment.
                 </p>
               </div>
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Magnam unde hic rem iste beatae veritatis? Molestias,
-                  quibusdam illo! Dicta, reprehenderit quibusdam enim ab ullam
-                  ea atque nemo voluptatum asperiores dolorum.
-                </p>
+              <div className='imgcontainer'>
+                {/*<img src='images/HB_BLUE.jpg' alt='hq render' />*/}
+                <Slideshow images={slideshow} />
               </div>
-              <div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Magnam unde hic rem iste beatae veritatis? Molestias,
-                  quibusdam illo! Dicta, reprehenderit quibusdam enim ab ullam
-                  ea atque nemo voluptatum asperiores dolorum.
-                </p>
-              </div>
+            </div>
+            <div className='showreel'>
+              <h1> SHOWREEL </h1>
+            </div>
+            <div className='bookings'>
+              <h1> BOOKINGS </h1>
             </div>
           </div>
         </div>

@@ -45,9 +45,5 @@ export default function Slideshow(props) {
     clearInterval(interval)
   }
 
-  return (
-    <section className='slideshow'>
-      <img src={images[current].src} alt='' />
-    </section>
-  )
+  return <img src={images[current].src} alt='' />
 }
