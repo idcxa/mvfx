@@ -1,41 +1,57 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import { Route, NavLink, HashRouter } from 'react-router-dom'
-import Home from './home'
+import ReactDOM from 'react-dom'
+
+import Home from './Home'
 import Products from './book'
 import './css/header.scss'
+import Navbar from './components/navbar'
+//import { keyframes } from 'styled-components'
 
 class Main extends Component {
+  constructor(props) {
+    super(props)
+    this.myRef = React.createRef()
+    this.state = {
+      scrollTop: 0,
+      visible: true,
+      buffer: 0,
+    }
+  }
+
+  onScroll = () => {
+    const scrollTop = this.myRef.current.scrollTop
+    const prevScroll = this.state.scrollTop
+    console.log(prevScroll, scrollTop, this.state.buffer)
+    // previous and current
+    // if previous > current: hide
+    // if previous < current: show
+    // but only show if current < previous - 20
+    if (prevScroll > scrollTop) {
+      this.setState({ buffer: prevScroll - scrollTop })
+    } else {
+      this.setState({ buffer: 0 })
+    }
+    this.setState({
+      scrollTop: scrollTop,
+      visible:
+        (prevScroll > scrollTop &&
+          (this.state.visible === true || this.state.buffer > 20)) ||
+        scrollTop < 300,
+    })
+  }
   render() {
     return (
       <HashRouter>
-        {/*
-        <header className='header'>
-          <div className='head'>
-            <NavLink className='text-2xl text-purple' to='/'>
-              MVFX LTD.
-            </NavLink>
-            <button
-              className='navbar-toggler'
-              type='button'
-              data-bs-toggle='collapse'
-              data-bs-target='/navbarSupportedContent'
-              aria-controls='navbarSupportedContent'
-              aria-expanded='false'
-              aria-label='Toggle navigation'>
-              <span className='navbar-toggler-icon'></span>
-            </button>
+        <div id='content'>
+          <Navbar visible={this.state.visible} />
+          <div
+            className='page parallax'
+            ref={this.myRef}
+            onScroll={() => this.onScroll()}>
+            <Route exact path='/' component={Home} />
+            <Route path='/book' component={Products} />
           </div>
-          <div className='tail'>
-            <NavLink to='/work'>Work</NavLink>
-            <NavLink to='/about'>About</NavLink>
-            <NavLink to='/book'>Book now</NavLink>
-            <NavLink to='/Contact'>Contact</NavLink>
-          </div>
-        </header>
-        */}
-        <div className='content'>
-          <Route exact path='/' component={Home} />
-          <Route path='/book' component={Products} />
         </div>
       </HashRouter>
     )

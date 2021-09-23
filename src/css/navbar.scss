@@ -1,0 +1,13 @@
+.navbar {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  transition: top 0.6s;
+  height: clamp(6vh, 20vw, 150px);
+  z-index: 500;
+}
+
+.navbar--hidden {
+  top: -50px;
+}

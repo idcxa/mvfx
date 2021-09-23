@@ -1,10 +1,34 @@
 import { useState, useCallback, useEffect } from 'react'
 import Carousel, { Modal, ModalGateway } from 'react-images'
 //import Gallery from 'react-photo-gallery'
+import Slide from 'react-reveal/Slide'
 import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
 } from 'react-icons/io'
+
+import Carousel2 from 'react-multi-carousel'
+import 'react-multi-carousel/lib/styles.css'
+
+const responsive = {
+  superLargeDesktop: {
+    // the naming can be any, depends on you.
+    breakpoint: { max: 4000, min: 3000 },
+    items: 5,
+  },
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 2,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+}
 
 export const homepage = [
   {
@@ -107,46 +131,74 @@ export default function Gallery(props) {
   }
   const images = props.images
   const [current, setCurrent] = useState(0)
+  const [isSlide, setSlide] = useState(false)
   //const [timer, setTimer] = useState(interval)
 
   const slideNext = () => {
+    setSlide(true)
     setCurrent(current === images.length - 1 ? 0 : current + 1)
   }
   const slidePrev = () => {
     setCurrent(current === 0 ? images.length - 1 : current - 1)
   }
   return (
-    <div className='gallery'>
-      <IoIosArrowDropleftCircle
-        id='left'
-        className='arrow'
-        onClick={() => slidePrev()}
-      />
+    <>
+      <Carousel2
+        className='gallery'
+        swipeable={true}
+        draggable={true}
+        showDots={false}
+        responsive={responsive}
+        ssr={true} // means to render carousel on server-side.
+        infinite={false}
+        autoPlaySpeed={1000}
+        keyBoardControl={true}
+        //customTransition='all .5'
+        transitionDuration={500}
+        containerClass='gallery'
+        removeArrowOnDeviceType={['tablet', 'mobile']}
+        dotListClass='custom-dot-list-style'
+        itemClass='carousel-item-padding-40-px'>
+        {images.map((img, index) => {
+          return (
+            <img src={img.src} alt='' onClick={() => openLightbox(index)} />
+          )
+        })}
+      </Carousel2>
+      {/*
       <div className='gallery'>
-        {images.map((img, index) => {
-          if (index < current + items && index >= current) {
-            return (
-              <img src={img.src} alt='' onClick={() => openLightbox(index)} />
-            )
-          } else {
-            return <></>
-          }
-        })}
-        {images.map((img, index) => {
-          if (index < current + items - images.length) {
-            return (
-              <img src={img.src} alt='' onClick={() => openLightbox(index)} />
-            )
-          } else {
-            return <></>
-          }
-        })}
+        <IoIosArrowDropleftCircle
+          id='left'
+          className='arrow'
+          onClick={() => slidePrev()}
+        />
+        <div className='gallery'>
+          {images.map((img, index) => {
+            if (index < current + items && index >= current) {
+              return (
+                <img src={img.src} alt='' onClick={() => openLightbox(index)} />
+              )
+            } else {
+              return <></>
+            }
+          })}
+          {images.map((img, index) => {
+            if (index < current + items - images.length) {
+              return (
+                <img src={img.src} alt='' onClick={() => openLightbox(index)} />
+              )
+            } else {
+              return <></>
+            }
+          })}
+        </div>
+        <IoIosArrowDroprightCircle
+          id='right'
+          className='arrow'
+          onClick={() => slideNext()}
+        />
       </div>
-      <IoIosArrowDroprightCircle
-        id='right'
-        className='arrow'
-        onClick={() => slideNext()}
-      />
+        */}
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
@@ -161,6 +213,6 @@ export default function Gallery(props) {
           </Modal>
         ) : null}
       </ModalGateway>
-    </div>
+    </>
   )
 }

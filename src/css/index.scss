@@ -9,6 +9,10 @@ html {
   font-size: 1.125rem;
   text-align: center;
   overflow: hidden;
+  //padding-top: 100px;
+  padding: 0;
+  transition: all 0.25s ease-out;
+  background-color: black;
 }
 
 code {
@@ -25,15 +29,21 @@ h1 {
 
 h2 {
   font-family: 'Roboto', sans-serif;
-  font-size: min(7vw, 44px);
+  font-size: min(7vw, 100px);
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   width: 100%;
 }
 
 h3 {
-  font-family: 'Cabin', sans-serif;
-  font-size: min(7vw, 28px);
+  font-family: 'Roboto', sans-serif;
+  font-size: min(7vw, 56px);
+  font-weight: 600;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: min(7vw, 44px);
   font-weight: 600;
 }
 
