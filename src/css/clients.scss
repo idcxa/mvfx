@@ -1,7 +1,10 @@
+@import './colours';
+
 .clients {
   padding: 8vw;
   padding-top: 4vw;
-  background: #ffc03a;
+  background: $bg-clients;
+  color: $text-dark;
   h2 {
     margin: 0;
   }

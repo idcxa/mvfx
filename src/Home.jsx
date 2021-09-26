@@ -1,8 +1,8 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import './css/home.scss'
 import Slideshow from './components/slideshow'
 import Gallery from './components/gallery'
-import Images, { homepage, slideshow } from './components/gallery'
+import { homepage, slideshow } from './components/gallery'
 import Fade from 'react-reveal/Fade'
 import Clients from './components/clients.jsx'
 

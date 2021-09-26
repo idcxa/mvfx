@@ -1,3 +1,5 @@
+@import './colours';
+
 .content {
   //margin-top: 100px;
   overflow: visible;
@@ -5,9 +7,9 @@
 }
 .page {
   //padding-top: min(20vw, 150px);
-  background: black;
+  background: $bg-dark;
   h1 {
-    color: #ffc03a;
+    color: $text-contrast;
   }
   position: relative;
   //padding: 6vh;
@@ -40,8 +42,8 @@ $gap-size: 2vw;
   display: inline-flex;
   margin: 0vh $gap-size 0vh $gap-size;
   //max-height: calc(800px - 20vw);
-  background: #d1d1cd;
-  color: black;
+  background: $very-white;
+  color: $text-dark;
   div {
     max-width: 50%;
     overflow: hidden;
@@ -69,15 +71,14 @@ $gap-size: 2vw;
 #text2 {
   padding: 2vh;
   padding: 5vw calc(4px + 2vh) 5vw calc(4px + 2vh);
-  background-color: black;
+  background: $bg-dark;
   .txtcontainer {
     background: black;
-    color: white;
+    color: $text-light;
   }
 }
 
 .text-flex {
-  background: #242424;
   display: flex;
   max-height: 100%;
   align-items: center;
@@ -102,8 +103,8 @@ $gap-size: 2vw;
 
 .showreel {
   width: 100vw;
-  max-height: 56.25vw;
-  background-color: black;
+  height: 56.25vw;
+  background: $bg-dark;
   h1 {
     margin: 0;
   }
@@ -177,19 +178,19 @@ $gap-size: 2vw;
     left: 50%; /* Position text in the middle */
     transform: translate(-50%, -50%); /* Position text in the middle */
     mix-blend-mode: screen; /* This makes the cutout text possible */
-    color: white;
+    color: $text-light;
     mix-blend-mode: multiply;
   }
 }
 
 /*
 .bookings {
-  background-color: #d1d1cd;
+  background: #d1d1cd;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
   width: 100%;
-  color: black;
+  color: $text-dark;
   padding: 8vh 2vh 4vh 2vh;
   h2 {
     text-align: center;
@@ -200,8 +201,8 @@ $gap-size: 2vw;
     margin: 0;
   }
   div {
-    background-color: black;
-    color: white;
+    background: $bg-dark;
+    color: $text-light;
     margin: 4px;
     padding: 2vh;
     width: 100%;
@@ -215,7 +216,7 @@ $gap-size: 2vw;
       width: 100%;
       text-align: center;
       flex-grow: 10;
-      background-color: #fff;
+      background: $text-light;
       font-style: italic;
     }
     .name {
@@ -244,8 +245,8 @@ $gap-size: 2vw;
 */
 
 .bookings {
-  background-color: #d1d1cd;
-  color: black;
+  background: #fafafa;
+  color: $text-dark;
   padding: 8vh calc(#{$gap-size} / 2) 8vh calc(#{$gap-size} / 2);
   h2 {
     text-align: center;
@@ -266,7 +267,7 @@ $gap-size: 2vw;
     width: 100%;
     div {
       background: black;
-      color: white;
+      color: $text-light;
       width: 100%;
       margin: calc(#{$gap-size} / 2);
       height: 100%;
@@ -285,12 +286,12 @@ $gap-size: 2vw;
 }
 
 .services {
-  background-color: #d1d1cd;
+  background: $very-white;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  color: black;
+  color: $text-dark;
   padding-top: 0vh;
   padding-bottom: $gap-size;
   padding: 0vh 1vw 1vw 1vw;
@@ -299,8 +300,8 @@ $gap-size: 2vw;
     padding: 2vh;
   }
   div {
-    background-color: black;
-    color: white;
+    background: $bg-dark;
+    color: $text-light;
     padding: 2vh;
     width: 100%;
     margin: 1vw;
@@ -314,7 +315,7 @@ $gap-size: 2vw;
       width: 100%;
       text-align: center;
       flex-grow: 10;
-      background-color: #fff;
+      background: $bg-light;
       font-style: italic;
     }
     .name {
@@ -342,7 +343,7 @@ $gap-size: 2vw;
 }
 
 .clients-div {
-  color: black;
+  color: $text-dark;
   padding: 0;
   padding-top: $gap-size;
 }
