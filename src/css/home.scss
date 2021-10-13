@@ -42,7 +42,7 @@ $gap-size: 2vw;
   display: inline-flex;
   margin: 0vh $gap-size 0vh $gap-size;
   //max-height: calc(800px - 20vw);
-  background: $very-white;
+  background: $bg-light;
   color: $text-dark;
   div {
     max-width: 50%;
@@ -73,7 +73,7 @@ $gap-size: 2vw;
   padding: 5vw calc(4px + 2vh) 5vw calc(4px + 2vh);
   background: $bg-dark;
   .txtcontainer {
-    background: black;
+    background: $bg-dark;
     color: $text-light;
   }
 }
@@ -83,7 +83,6 @@ $gap-size: 2vw;
   max-height: 100%;
   align-items: center;
   .txtcontainer {
-    background: #242424;
     padding: 0 6vw 4vw 6vw;
   }
   .imgcontainer {
@@ -92,7 +91,6 @@ $gap-size: 2vw;
     height: 100%;
     max-width: 20%;
     margin: 4vh;
-    background: #242424;
     img {
       object-fit: cover;
       width: 100%;
@@ -245,7 +243,7 @@ $gap-size: 2vw;
 */
 
 .bookings {
-  background: #fafafa;
+  background: $bg-light;
   color: $text-dark;
   padding: 8vh calc(#{$gap-size} / 2) 8vh calc(#{$gap-size} / 2);
   h2 {
@@ -266,7 +264,7 @@ $gap-size: 2vw;
     align-items: flex-start;
     width: 100%;
     div {
-      background: black;
+      background: $bg-dark;
       color: $text-light;
       width: 100%;
       margin: calc(#{$gap-size} / 2);
@@ -286,7 +284,7 @@ $gap-size: 2vw;
 }
 
 .services {
-  background: $very-white;
+  background: $bg-light;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -336,7 +334,6 @@ $gap-size: 2vw;
         width: 60%;
         max-width: 200px;
         height: auto;
-        background: #fff;
       }
     }
   }
@@ -371,6 +368,7 @@ $gap-size: 2vw;
   right: 0;
   bottom: 0;
   left: 0;
+  height: 100%;
 }
 
 .layerBase {
@@ -380,6 +378,7 @@ $gap-size: 2vw;
 .layerBack {
   -webkit-transform: translateZ(-300px) scale(2);
   transform: translateZ(-300px) scale(2);
+  filter: blur(2px);
 }
 
 #group1 {
@@ -405,8 +404,8 @@ $gap-size: 2vw;
 #group2 {
   //margin: 4vw;
   z-index: 80;
-  height: 80vh;
-  background: black;
+  height: 100%;
+  background: $bg-dark;
 }
 
 /* PARALLAX CLASSES */

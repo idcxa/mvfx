@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { Route, NavLink, HashRouter } from 'react-router-dom'
 import ReactDOM from 'react-dom'
 
-import Home from './Home'
+import Home from './home'
 import Products from './book'
 import './css/header.scss'
 import Navbar from './components/navbar'
+import MailForm from './components/mailform'
 //import { keyframes } from 'styled-components'
 
 class Main extends Component {
@@ -45,6 +46,7 @@ class Main extends Component {
       <HashRouter>
         <div id='content'>
           <Navbar visible={this.state.visible} />
+          <MailForm />
           <div
             className='page parallax'
             ref={this.myRef}

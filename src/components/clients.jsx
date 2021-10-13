@@ -6,24 +6,28 @@ export const clients = [
     image: 'images/logos/BERBERRY_LOGO.png',
   },
   {
-    url: 'https://capsuleskateboards.com/skateboards',
-    image: 'images/logos/CAP_LOGO.png',
-  },
-  {
     url: 'https://cbd-one.co.uk/',
     image: 'images/logos/CBD_ONE.png',
-  },
-  {
-    url: 'https://www.casewarehouse.com/',
-    image: 'images/logos/CW_LOGO.png',
   },
   {
     url: 'https://www.danone.co.uk/',
     image: 'images/logos/DANONE_LOGO.png',
   },
   {
+    url: 'https://shop.neos.co.uk/',
+    image: 'images/logos/NEOS_LOGO.png',
+  },
+  {
+    url: 'https://www.casewarehouse.com/',
+    image: 'images/logos/CW_LOGO.png',
+  },
+  {
     url: 'https://greenssteel.com/',
     image: 'images/logos/GREENS_LOGO.png',
+  },
+  {
+    url: 'https://capsuleskateboards.com/skateboards',
+    image: 'images/logos/CAP_LOGO.png',
   },
   {
     url: 'https://www.iconnutrition.com/',
@@ -36,10 +40,6 @@ export const clients = [
   {
     url: 'https://www.lighthubdirect.com/collections/hall-corridor-lights/products/lighthub-half-moon-modern-up-gypsum-plaster-indoor-paintable-wall-washer-uplight-e14-ses-sconce-light-fitting-led-ready-white',
     image: 'images/logos/LIGHTHUB_LOGO.png',
-  },
-  {
-    url: 'https://shop.neos.co.uk/',
-    image: 'images/logos/NEOS_LOGO.png',
   },
   {
     url: 'https://www.nordicsupplements.com/',

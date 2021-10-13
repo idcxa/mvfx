@@ -1,0 +1,12 @@
+.footercontainer {
+  position: fixed;
+  height: 20vh;
+  width: 100vw;
+  top: 0vw;
+}
+.footer {
+  position: fixed;
+  height: 100%;
+
+  z-index: 4000;
+}

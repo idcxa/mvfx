@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { Route, NavLink, HashRouter } from 'react-router-dom'
 import '../css/header.scss'
 
@@ -27,7 +27,7 @@ export default class Navbar extends Component {
           <div className='tail'>
             <NavLink to='/work'>Work</NavLink>
             <NavLink to='/about'>About</NavLink>
-            <NavLink to='/book'>Book now</NavLink>
+            <NavLink to='/products'>Products</NavLink>
             <NavLink to='/Contact'>Contact</NavLink>
           </div>
         </header>

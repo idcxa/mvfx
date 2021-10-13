@@ -1,6 +1,6 @@
+import React from 'react'
 import Navbar from './navbar'
-import React, { Component } from 'react'
-import { Route, NavLink, HashRouter } from 'react-router-dom'
+import MailForm from './mailform'
 
 export default class Layout extends React.Component {
   // all your scrolling functions & stuff here
@@ -25,6 +25,7 @@ export default class Layout extends React.Component {
   render() {
     return (
       <section>
+        <MailForm />
         <Navbar />
         <div className='page parallax' onScroll={() => this.onScroll()}>
           {this.props.children}
