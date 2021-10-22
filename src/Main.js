@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import { Route, NavLink, HashRouter } from 'react-router-dom'
-import ReactDOM from 'react-dom'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 import Home from './home'
 import Products from './book'
 import './css/header.scss'
 import Navbar from './components/navbar'
+import Footer from './components/footer'
 import MailForm from './components/mailform'
+//import Siblings from './components/siblings'
 //import { keyframes } from 'styled-components'
 
 class Main extends Component {
@@ -15,15 +16,23 @@ class Main extends Component {
     this.myRef = React.createRef()
     this.state = {
       scrollTop: 0,
-      visible: true,
+      navbarvisible: true,
+      mailformvisible: false,
+      mailformshow: true,
       buffer: 0,
     }
+  }
+
+  showMailform = () => {
+    this.setState({ mailformvisible: true, mailformshow: false })
+    this.child.toggleShow()
   }
 
   onScroll = () => {
     const scrollTop = this.myRef.current.scrollTop
     const prevScroll = this.state.scrollTop
     console.log(prevScroll, scrollTop, this.state.buffer)
+    //console.log(this.state.mailformvisible, this.state.mailformshow)
     // previous and current
     // if previous > current: hide
     // if previous < current: show
@@ -35,27 +44,36 @@ class Main extends Component {
     }
     this.setState({
       scrollTop: scrollTop,
-      visible:
+      navbarvisible:
         (prevScroll > scrollTop &&
-          (this.state.visible === true || this.state.buffer > 20)) ||
+          (this.state.navbarvisible === true || this.state.buffer > 20)) ||
         scrollTop < 300,
     })
   }
   render() {
     return (
-      <HashRouter>
+      <Router>
         <div id='content'>
-          <Navbar visible={this.state.visible} />
-          <MailForm />
-          <div
-            className='page parallax'
-            ref={this.myRef}
-            onScroll={() => this.onScroll()}>
-            <Route exact path='/' component={Home} />
-            <Route path='/book' component={Products} />
+          <Navbar visible={this.state.navbarvisible} />
+          <MailForm
+            visibility={this.state.mailformvisible}
+            show={this.state.mailformshow}
+            onRef={(ref) => (this.child = ref)}
+          />
+          <div className='page parallax' ref={this.myRef}>
+            <Switch>
+              <Route
+                exact
+                path='/'
+                component={() => <Home showMailform={this.showMailform} />}
+              />
+              <Route path='/products' component={Products} />
+            </Switch>
+            <Footer style={{ visibility: 'hidden' }} />
           </div>
+          <Footer />
         </div>
-      </HashRouter>
+      </Router>
     )
   }
 }

@@ -11,6 +11,7 @@ export default class Navbar extends Component {
             <NavLink className='' to='/'>
               M \/ F X
             </NavLink>
+            <p>{this.props.visible}</p>
             {/*
             <button
               className='navbar-toggler'

@@ -4,6 +4,7 @@
   //margin-top: 100px;
   overflow: visible;
   //padding-top: clamp(6vh, 20vw, 150px);
+  background: black;
 }
 .page {
   //padding-top: min(20vw, 150px);
@@ -11,11 +12,20 @@
   h1 {
     color: $text-contrast;
   }
-  position: relative;
   //padding: 6vh;
+  position: static;
   padding-top: clamp(6vh, 20vw, 150px);
-  overflow: hidden;
+  overflow: visible;
+  background: red;
+  background: none;
+  padding-bottom: 200px;
   //max-height: calc(100vh - clamp(6vh, 20vw, 150px));
+}
+
+.emptyspace {
+  height: 100px;
+  visibility: hidden;
+  z-index: -5000;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -32,9 +42,16 @@
 $gap-size: 2vw;
 
 .margin {
+  clear: both;
   margin: 0vh $gap-size 0vh $gap-size;
   padding: 8vh $gap-size 8vh $gap-size;
   width: calc(100% - 4vw);
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
 }
 
 .text-image {
@@ -59,7 +76,6 @@ $gap-size: 2vw;
   }
   .imagecontainer {
     display: inline-block;
-    overflow: scroll;
     height: 100%;
   }
   img {
@@ -70,7 +86,7 @@ $gap-size: 2vw;
 }
 #text2 {
   padding: 2vh;
-  padding: 5vw calc(4px + 2vh) 5vw calc(4px + 2vh);
+  padding: 5vw calc(4px + 2vh) $gap-size calc(4px + 2vh);
   background: $bg-dark;
   .txtcontainer {
     background: $bg-dark;
@@ -99,22 +115,39 @@ $gap-size: 2vw;
   }
 }
 
-.showreel {
+.showreel-placeholder {
   width: 100vw;
-  height: 56.25vw;
-  background: $bg-dark;
+  height: 100vh;
   h1 {
     margin: 0;
+  }
+  h2 {
+    margin: 0;
+  }
+  #group1 {
+    width: 100%;
+  }
+  z-index: -2000;
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    height: 100vh;
+    .text-box {
+      height: 25%;
+    }
   }
 }
 
 .gallery {
+  background: black;
   display: flex;
   position: relative;
   align-items: center;
   height: clamp(400px, 20vw, 400px);
   width: 100vw;
-  margin: 4vh 0 4vh 0;
+  padding: 4vh 0 4vh 0;
   div {
     display: flex;
     justify-content: space-between;
@@ -245,7 +278,7 @@ $gap-size: 2vw;
 .bookings {
   background: $bg-light;
   color: $text-dark;
-  padding: 8vh calc(#{$gap-size} / 2) 8vh calc(#{$gap-size} / 2);
+  padding: $gap-size calc(#{$gap-size} / 2) 8vh calc(#{$gap-size} / 2);
   h2 {
     text-align: center;
     padding: 0;
@@ -254,9 +287,19 @@ $gap-size: 2vw;
   h4 {
     font-weight: 300;
     margin-top: 5px;
+    margin: 0;
   }
   p {
     margin: 0;
+  }
+  .title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    button {
+      width: 30%;
+      margin: 4vh;
+    }
   }
   .flex {
     display: flex;
@@ -281,6 +324,11 @@ $gap-size: 2vw;
       }
     }
   }
+}
+
+.verticalgap {
+  height: $gap-size;
+  background: black;
 }
 
 .services {
@@ -343,6 +391,7 @@ $gap-size: 2vw;
   color: $text-dark;
   padding: 0;
   padding-top: $gap-size;
+  background: black;
 }
 
 /* PARALLAX CLASSES */
@@ -357,12 +406,14 @@ $gap-size: 2vw;
 }
 
 .parallaxGroup {
+  clear: both;
   position: relative;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
 .parallaxLayer {
+  clear: both;
   position: absolute;
   top: 0;
   right: 0;
@@ -378,7 +429,7 @@ $gap-size: 2vw;
 .layerBack {
   -webkit-transform: translateZ(-300px) scale(2);
   transform: translateZ(-300px) scale(2);
-  filter: blur(2px);
+  filter: blur(1px);
 }
 
 #group1 {
@@ -403,8 +454,8 @@ $gap-size: 2vw;
 
 #group2 {
   //margin: 4vw;
+  overflow: visible;
   z-index: 80;
-  height: 100%;
   background: $bg-dark;
 }
 
