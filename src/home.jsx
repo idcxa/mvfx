@@ -124,51 +124,52 @@ export default class Home extends React.Component {
             <div className='showreel'>
               <h2> SHOWREEL </h2>
             </div>
-            <div className='bookings margin'>
-              <h2> BOOKINGS </h2>
-              <h4> client satisfaction is our goal </h4>
-              <div className='flex'>
-                <div>
-                  <h3>
-                    <strong>£</strong>150
-                  </h3>
-                  <p>daily</p>
+            <div className='sidebyside'>
+              <div className='bookings margin'>
+                <h2> BOOKINGS </h2>
+                <h4> client satisfaction is our goal </h4>
+                <div className='flex'>
+                  <div>
+                    <h3>
+                      <strong>£</strong>150
+                    </h3>
+                    <p>daily</p>
+                  </div>
+                  <div>
+                    <h3>
+                      <strong>£</strong>5,000
+                    </h3>
+                    <p>monthly</p>
+                  </div>
+                  <div>
+                    <h3>
+                      <strong>£</strong>1,500
+                    </h3>
+                    <p>weekly</p>
+                  </div>
                 </div>
-                <div>
-                  <h3>
-                    <strong>£</strong>5,000
-                  </h3>
-                  <p>monthly</p>
-                </div>
-                <div>
-                  <h3>
-                    <strong>£</strong>1,500
-                  </h3>
-                  <p>weekly</p>
+                <div className='flex'>
+                  <div>
+                    <h4>SOME</h4>
+                    <p>text about this price bracket</p>
+                  </div>
+                  <div>
+                    <h4>SOME</h4>
+                    <p>text about this price bracket</p>
+                    <p>some more text about this price bracket</p>
+                    <p>even more text about this price bracket</p>
+                  </div>
+                  <div>
+                    <h4>SOME</h4>
+                    <p>text about this price bracket</p>
+                    <p>some more text about this price bracket</p>
+                  </div>
                 </div>
               </div>
-              <div className='flex'>
-                <div>
-                  <h4>SOME</h4>
-                  <p>text about this price bracket</p>
-                </div>
-                <div>
-                  <h4>SOME</h4>
-                  <p>text about this price bracket</p>
-                  <p>some more text about this price bracket</p>
-                  <p>even more text about this price bracket</p>
-                </div>
-                <div>
-                  <h4>SOME</h4>
-                  <p>text about this price bracket</p>
-                  <p>some more text about this price bracket</p>
-                </div>
+              <div className='clients-div margin'>
+                <Clients />
               </div>
             </div>
-            <div className='clients-div margin'>
-              <Clients />
-            </div>
-            <Footer />
           </div>
         </div>
       </>

@@ -70,8 +70,8 @@ export const clients = [
 export default function Clients() {
   return (
     <div className='clients'>
-      <h2> CLIENTS </h2>
-      <h4> client satisfaction is our goal </h4>
+      <h2>CLIENTS</h2>
+      <h4>client satisfaction is our goal</h4>
       <div className='flex'>
         {clients.map((x) => {
           return (

@@ -462,6 +462,20 @@ $gap-size: 2vw;
   }
 }
 
+@media only screen and (min-width: 2000px) {
+  .sidebyside {
+    display: flex;
+  }
+  .clients-div {
+    color: $text-dark;
+    padding: 0;
+  }
+  .bookings {
+    padding: min(8vw, 100px);
+    padding-top: 4vw;
+  }
+}
+
 /* Parallax base styles
 --------------------------------------------- */
 
