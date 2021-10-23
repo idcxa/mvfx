@@ -19,7 +19,7 @@
   visibility: visible;
   position: fixed;
   z-index: 200;
-  width: 80vw;
+  width: min(80vw, 1000px);
   right: 0vw;
   margin-top: auto;
   margin-bottom: auto;
@@ -54,8 +54,14 @@ button.buttoncontainer {
     writing-mode: vertical-lr;
     text-orientation: sideways-right;
     transform: rotate(-180deg);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
   }
-  transition: all 0.6s ease-in;
 }
 
 .top {
@@ -81,9 +87,29 @@ button.buttoncontainer {
   border-left: $button-width solid transparent;
   background: none;
 }
+.buttoncontainer:hover {
+  $color: white;
+  .show {
+    background: $color;
+  }
+  .top {
+    border-top: 0 solid $color;
+    border-bottom: $button-width solid $color;
+    background: none;
+  }
+  .bottom {
+    border-top: $button-width solid $color;
+    border-bottom: 0 solid $color;
+    background: none;
+  }
+  p {
+    color: black;
+  }
+  background: none;
+}
 
 .container--hidden {
-  right: calc(-80vw + calc(min(5vw, 24px) + 10px));
+  right: calc(max(-80vw, -1000px) + calc(min(5vw, 24px) + 10px));
 }
 
 form {

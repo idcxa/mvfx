@@ -2536,7 +2536,7 @@ anymatch@^2.0.0:
     micromatch "^3.1.4"
     normalize-path "^2.1.1"
 
-anymatch@^3.0.0, anymatch@^3.0.3, anymatch@~3.1.2:
+anymatch@^3.0.0, anymatch@^3.0.3, anymatch@^3.1.2, anymatch@~3.1.2:
   version "3.1.2"
   resolved "https://registry.npm.taobao.org/anymatch/download/anymatch-3.1.2.tgz?cache=0&sync_timestamp=1617747806715&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fanymatch%2Fdownload%2Fanymatch-3.1.2.tgz#c0557c096af32f106198f4f4e2a383537e378716"
   integrity sha1-wFV8CWrzLxBhmPT04qODU343hxY=
@@ -11608,6 +11608,14 @@ terminal-link@^2.0.0:
     ansi-escapes "^4.2.1"
     supports-hyperlinks "^2.0.0"
 
+terser-brunch@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.npmmirror.com/terser-brunch/download/terser-brunch-4.1.0.tgz#b35e740b726205ecdd79ee24b700601766e9c199"
+  integrity sha1-s150C3JiBezdee4ktwBgF2bpwZk=
+  dependencies:
+    anymatch "^3.1.2"
+    terser "^5.7.1"
+
 terser-webpack-plugin@4.2.3:
   version "4.2.3"
   resolved "https://registry.nlark.com/terser-webpack-plugin/download/terser-webpack-plugin-4.2.3.tgz?cache=0&sync_timestamp=1631202578144&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fterser-webpack-plugin%2Fdownload%2Fterser-webpack-plugin-4.2.3.tgz#28daef4a83bd17c1db0297070adc07fc8cfc6a9a"
@@ -11647,7 +11655,7 @@ terser@^4.1.2, terser@^4.6.2, terser@^4.6.3:
     source-map "~0.6.1"
     source-map-support "~0.5.12"
 
-terser@^5.3.4:
+terser@^5.3.4, terser@^5.7.1:
   version "5.9.0"
   resolved "https://registry.nlark.com/terser/download/terser-5.9.0.tgz?cache=0&sync_timestamp=1632229723897&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fterser%2Fdownload%2Fterser-5.9.0.tgz#47d6e629a522963240f2b55fcaa3c99083d2c351"
   integrity sha1-R9bmKaUiljJA8rVfyqPJkIPSw1E=
