@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import { Route, NavLink, HashRouter } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import '../css/header.scss'
 
 export default class Navbar extends Component {
@@ -11,7 +11,6 @@ export default class Navbar extends Component {
             <NavLink className='' to='/'>
               M \/ F X
             </NavLink>
-            <p>{this.props.visible}</p>
             {/*
             <button
               className='navbar-toggler'
