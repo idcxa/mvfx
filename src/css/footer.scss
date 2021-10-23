@@ -1,12 +1,13 @@
-.footercontainer {
+footer {
+  display: flex;
   position: fixed;
-  height: 20vh;
-  width: 100vw;
-  top: 0vw;
-}
-.footer {
-  position: fixed;
-  height: 100%;
+  justify-content: space-around;
+  background: black;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  bottom: 0;
+  width: 100%;
 
-  z-index: 4000;
+  z-index: -4000;
 }

@@ -1,43 +1,56 @@
 .outercontainer {
-  display: flex;
-  position: fixed;
   height: 100vh;
   width: 100vw;
+  position: fixed;
   z-index: 2000;
-  visibility: hidden;
-  align-items: center;
+  display: flex;
+  //visibility: hidden;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.6s ease-in;
 }
 
 .container,
 .container--hidden {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
   visibility: visible;
   position: fixed;
   z-index: 200;
-  width: 52vw;
+  width: 80vw;
   right: 0vw;
   margin-top: auto;
   margin-bottom: auto;
 
-  height: 40vw;
+  height: 100vh;
   display: flex;
   align-items: center;
-  transition: all 0.6s ease-in;
+  transition: all 0.5s ease-in;
+  background: none;
 }
 
-.buttoncontainer {
+$button-width: calc(min(5vw, 24px) + 10px);
+
+button.buttoncontainer {
+  all: unset;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: $button-width;
 }
 
-button.show {
-  width: 2vw;
+.show {
   height: auto;
-  height: 6vw;
+  height: calc(#{$button-width} * 4);
   background: #1a1a1a;
   border: black;
   color: white;
+  display: flex;
   p {
     margin: 0;
+    margin-left: 5px;
     writing-mode: vertical-lr;
     text-orientation: sideways-right;
     transform: rotate(-180deg);
@@ -45,38 +58,39 @@ button.show {
   transition: all 0.6s ease-in;
 }
 
-button.top {
+.top {
   width: 0;
   height: 0;
   margin: 0;
   padding: 0;
   border-top: 0 solid #1a1a1a;
-  border-bottom: 1vw solid #1a1a1a;
+  border-bottom: $button-width solid #1a1a1a;
 
-  border-left: 2vw solid transparent;
+  border-left: $button-width solid transparent;
   background: none;
 }
-button.bottom {
+
+.bottom {
   width: 0;
   height: 0;
   margin: 0;
   padding: 0;
-  border-top: 1vw solid #1a1a1a;
+  border-top: $button-width solid #1a1a1a;
   border-bottom: 0 solid #1a1a1a;
 
-  border-left: 2vw solid transparent;
+  border-left: $button-width solid transparent;
   background: none;
 }
 
 .container--hidden {
-  right: -50vw;
+  right: calc(-80vw + calc(min(5vw, 24px) + 10px));
 }
 
 form {
   display: inline-block;
-  padding: 4vw;
-  height: 40vw;
-  width: 50vw;
+  padding: 8vw;
+  height: 100%;
+  width: 100%;
 
   h3 {
     margin: 0;
