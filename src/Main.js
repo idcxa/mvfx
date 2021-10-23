@@ -31,7 +31,7 @@ class Main extends Component {
   onScroll = () => {
     const scrollTop = this.myRef.current.scrollTop
     const prevScroll = this.state.scrollTop
-    console.log(prevScroll, scrollTop, this.state.buffer)
+    //console.log(prevScroll, scrollTop, this.state.buffer)
     //console.log(this.state.mailformvisible, this.state.mailformshow)
     // previous and current
     // if previous > current: hide
@@ -50,17 +50,19 @@ class Main extends Component {
         scrollTop < 300,
     })
   }
+
   render() {
     return (
       <Router>
+        <Navbar visible={this.state.navbarvisible} />
         <div id='content'>
-          <Navbar visible={this.state.navbarvisible} />
           <MailForm
             visibility={this.state.mailformvisible}
             show={this.state.mailformshow}
             onRef={(ref) => (this.child = ref)}
           />
           <div className='page parallax' ref={this.myRef}>
+            <Navbar visible={false} />
             <Switch>
               <Route
                 exact
@@ -69,7 +71,7 @@ class Main extends Component {
               />
               <Route path='/products' component={Products} />
             </Switch>
-            <Footer style={{ visibility: 'hidden' }} />
+            <Footer style={{ position: 'relative', visibility: 'hidden' }} />
           </div>
           <Footer />
         </div>
