@@ -1,0 +1,41 @@
+@import './colours';
+
+.clients {
+  padding: min(8vw, 100px);
+  padding-top: 4vw;
+  background: $bg-contrast;
+  color: $text-dark;
+  h2 {
+    margin: 0;
+  }
+  h4 {
+    font-weight: 300;
+    margin: 10px 2vw 4vw 0vw;
+    width: 100%;
+    text-align: center;
+  }
+  .flex {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    a {
+      display: flex;
+      width: 30vh;
+      height: auto;
+      max-width: min(30vw, 180px);
+      padding-top: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+      white-space: nowrap;
+      text-align: center;
+      img {
+        padding: 1vh;
+        vertical-align: middle;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

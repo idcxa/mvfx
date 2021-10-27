@@ -4,6 +4,7 @@ in
 with nixpkgs;
 nixpkgs.mkShell {
   buildInputs = [
+    imagemagick
     yarn
     ];
   }

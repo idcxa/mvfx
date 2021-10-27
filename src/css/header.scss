@@ -1,6 +1,11 @@
-.header {
-  width: 100%;
-  min-height: 6vh;
+.header,
+.header--hidden,
+.headerblock {
+  top: 0px;
+  //left: -0px;
+  width: 100vw;
+  width: calc(100vw - 16px);
+  height: clamp(6vh, 20vw, 150px);
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -11,8 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 20vw;
-  max-height: 150px;
   background-color: black;
   padding-bottom: 2rem;
   font-weight: 700;
@@ -31,9 +34,29 @@
       padding-bottom: 0;
     }
   }
-  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=85)'; /* IE 8 */
-  filter: alpha(opacity=0); /* IE 5-7 */
-  -moz-opacity: 0; /* Netscape */
-  -khtml-opacity: 0; /* Safari 1.x */
-  opacity: 0; /* Good browsers */
+  a {
+    color: #cbbfbb;
+    text-decoration: none;
+  }
+  /*
+  -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=85)';
+  filter: alpha(opacity=0.5);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0;
+  opacity: 0.8;
+  */
+  transition: all 0.25s ease-out;
+}
+
+.header--hidden {
+  top: -300px;
+  transition: all 0.5s linear;
+}
+
+.headerblock,
+.headerblock--hidden {
+  width: calc(100vw - 16px);
+  max-height: 2vw;
+  padding: 0;
+  background: black;
 }

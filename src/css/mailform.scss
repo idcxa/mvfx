@@ -1,0 +1,163 @@
+.outercontainer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  //visibility: hidden;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.6s ease-in;
+}
+
+.container,
+.container--hidden {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  visibility: visible;
+  position: fixed;
+  z-index: 200;
+  width: min(80vw, 1000px);
+  right: 0vw;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in;
+  background: none;
+}
+
+$button-width: calc(min(5vw, 24px) + 10px);
+
+button.buttoncontainer {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: $button-width;
+}
+
+.show {
+  height: auto;
+  height: calc(#{$button-width} * 4);
+  background: #1a1a1a;
+  border: black;
+  color: white;
+  display: flex;
+  p {
+    margin: 0;
+    margin-left: 5px;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    transform: rotate(-180deg);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
+  }
+}
+
+.top {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border-top: 0 solid #1a1a1a;
+  border-bottom: $button-width solid #1a1a1a;
+
+  border-left: $button-width solid transparent;
+  background: none;
+}
+
+.bottom {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border-top: $button-width solid #1a1a1a;
+  border-bottom: 0 solid #1a1a1a;
+
+  border-left: $button-width solid transparent;
+  background: none;
+}
+.buttoncontainer:hover {
+  $color: white;
+  .show {
+    background: $color;
+  }
+  .top {
+    border-top: 0 solid $color;
+    border-bottom: $button-width solid $color;
+    background: none;
+  }
+  .bottom {
+    border-top: $button-width solid $color;
+    border-bottom: 0 solid $color;
+    background: none;
+  }
+  p {
+    color: black;
+  }
+  background: none;
+}
+
+.container--hidden {
+  right: calc(max(-80vw, -1000px) + calc(min(5vw, 24px) + 10px));
+}
+
+form {
+  display: inline-block;
+  padding: 8vw;
+  height: 100%;
+  width: 100%;
+
+  h3 {
+    margin: 0;
+  }
+  h4 {
+    margin: 0;
+  }
+  label {
+    width: 50%;
+  }
+  input {
+    width: 100;
+  }
+  p {
+    color: white;
+  }
+  background: #1a1a1a;
+}
+
+input[type='text'],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type='submit'] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: #45a049;
+}

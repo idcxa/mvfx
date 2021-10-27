@@ -1,6 +1,8 @@
+html {
+  background: black;
+}
 body,
 html {
-  background-color: #000;
   color: #f9f8f8;
   //font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
   font-family: 'Roboto', sans-serif;
@@ -8,6 +10,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-size: 1.125rem;
   text-align: center;
+  overflow: hidden;
+  //padding-top: 100px;
+  padding: 0;
+  transition: all 0.25s ease-out;
 }
 
 code {
@@ -18,27 +24,32 @@ code {
 h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 800;
-  font-size: min(15vw, 88px);
+  font-size: min(15vw, 200px);
   text-align: center;
 }
 
 h2 {
   font-family: 'Roboto', sans-serif;
-  font-size: min(7vw, 44px);
+  font-size: min(7vw, 100px);
   text-align: center;
-  font-weight: 500;
+  font-weight: 700;
   width: 100%;
-  padding-bottom: 1vh;
 }
 
 h3 {
-  font-family: 'Cabin', sans-serif;
-  font-size: min(7vw, 28px);
+  font-family: 'Roboto', sans-serif;
+  font-size: min(7vw, 56px);
+  font-weight: 600;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  font-size: min(7vw, 44px);
   font-weight: 600;
 }
 
 p {
   font-family: 'Raleway', sans-serif;
-  font-size: min(5vw, 20px);
+  font-size: min(5vw, 24px);
   font-weight: 400;
 }
