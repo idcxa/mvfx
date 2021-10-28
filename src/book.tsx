@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './css/booking.scss'
+//import './css/booking.scss'
 import './components/controls.scss'
 
 enum Selection {

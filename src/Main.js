@@ -54,7 +54,6 @@ class Main extends Component {
   render() {
     return (
       <Router>
-        <Navbar visible={this.state.navbarvisible} />
         <div id='content'>
           <MailForm
             visibility={this.state.mailformvisible}
@@ -62,7 +61,6 @@ class Main extends Component {
             onRef={(ref) => (this.child = ref)}
           />
           <div className='page parallax' ref={this.myRef}>
-            <Navbar visible={false} />
             <Switch>
               <Route
                 exact
@@ -73,7 +71,6 @@ class Main extends Component {
             </Switch>
             <Footer style={{ position: 'relative', visibility: 'hidden' }} />
           </div>
-          <Footer />
         </div>
       </Router>
     )

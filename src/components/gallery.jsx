@@ -165,7 +165,6 @@ export default function Gallery(props) {
           )
         })}
       </Carousel2>
-      {/*
       <div className='gallery'>
         <IoIosArrowDropleftCircle
           id='left'
@@ -198,7 +197,6 @@ export default function Gallery(props) {
           onClick={() => slideNext()}
         />
       </div>
-        */}
       <ModalGateway>
         {viewerIsOpen ? (
           <Modal onClose={closeLightbox}>
