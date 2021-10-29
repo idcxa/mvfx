@@ -11,20 +11,25 @@ import PlayerApp from './components/react-player'
 import { render } from '@testing-library/react'
 import screenfull from 'screenfull'
 import { findDOMNode } from 'react-dom'
+import useWindowDimensions from './components/windowSize'
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript'
 
 /// https://codepen.io/hexagoncircle/full/JjRYaZw
+
 
 export default class Home extends Component{
   constructor(props) {
     super(props)
     this.state = {
       playVideo: false,
-      image: 0
+      image: 0,
+      controls: false,
     }
     this.onClick = this.onClick.bind(this)
     this.handleProgress = this.handleProgress.bind(this)
     this.temp = this.temp.bind(this)
   }
+
   onClick = () => {
     this.props.showMailform()
   }
@@ -43,13 +48,24 @@ export default class Home extends Component{
     //attach our function to document event listener on scrolling whole doc
     componentDidMount() {
       this.props.onRef(this)
-      document.addEventListener("scroll", this.isInViewport);
+            this.setState({playVideo: true})
+            console.log('clicked')
+            this.isInViewport()
     }
 
     //do not forget to remove it after destroyed
     componentWillUnmount() {
-      document.removeEventListener("scroll", this.isInViewport);
       this.props.onRef(undefined)
+    }
+
+    playVideo = () => {
+      this.setState({playVideo: true})
+    }
+    pauseVideo = () => {
+      this.setState({playVideo: false})
+    }
+    toggleVideo = () => {
+      this.setState({playVideo: this.state.playVideo ? false : true})
     }
 
     //our function which is called anytime document is scrolling (on scrolling)
@@ -57,6 +73,8 @@ export default class Home extends Component{
         //get how much pixels left to scrolling our ReactElement
         const top = this.showreel.getBoundingClientRect().top;
         const bottom = this.showreel.getBoundingClientRect().bottom;
+
+        //const {height, width} = useWindowDimensions();
 
         //here we check if element top reference is on the top of viewport
         /*
@@ -66,12 +84,14 @@ export default class Home extends Component{
         * */
        console.log(top, bottom)
         if(top <= 500){
-            console.log("Element is in view or above the viewport");
-            this.setState({playVideo: true})
+          this.setState({playVideo: false})
+          console.log("Element is in view or above the viewport");
+          this.playVideo()
         } else if (top >= 600) {
             console.log("Element is outside view");
             this.setState({playVideo: false})
         }
+        console.log('playing:', this.state.playVideo)
     };
 
 
@@ -91,6 +111,8 @@ export default class Home extends Component{
   }
 
   render() {
+    const playing = this.state.playVideo
+    const controls = this.state.controls
   return (
     <>
       <div id='group1' className='parallaxGroup'>
@@ -109,13 +131,23 @@ export default class Home extends Component{
       <div id='group2' className='parallaxGroup'>
         <div className='text-image margin'>
           <ReactPlayer url='showreel.mp4' 
-            ref={this.ref}
-            loop='false' 
-            //playing='false' 
+            loop={true}
+            playing={playing}
             onProgress={this.handleProgress}
           />
           <button onClick={this.temp}>
             CLICK HERE TO SET VIDEO TO START
+          </button>
+          <button onClick={() => this.setState({playVideo: false})}>
+            PAUSE
+          </button>
+          <button onClick={() => {
+            this.setState({playVideo: true})
+            console.log('clicked')
+            this.isInViewport()
+          }}
+          >
+            PLAY
           </button>
           <div className='flex-text-image'>
             <div className='txtcontainer'>
@@ -173,9 +205,40 @@ export default class Home extends Component{
         </div>          
       </div>
 
+          <button onClick={this.temp}>
+            CLICK HERE TO SET VIDEO TO START
+          </button>
+          <button onClick={() => this.setState({playVideo: false})}>
+            PAUSE
+          </button>
+          <button onClick={() => {
+            this.setState({playVideo: true})
+            this.setState({playVideo: false})
+            console.log('clicked')
+            this.isInViewport()
+          }}
+          >
+            PLAY
+          </button>
       <div ref={(e) => this.showreel = e} className='parallaxGroup showreel-placeholder'>
         <div id='video' className='parallaxLayer layerBack flex'>
-          <ReactPlayer onDoubleClick={() => screenfull.request(findDOMNode(this.player))} width='100%' height='100%' loop={true} playing={this.state.playVideo} url='showreel.mp4' controls={false}/>
+          <ReactPlayer 
+            onClick={() => {
+              this.setState({playVideo: true})
+              console.log('clicked')
+              this.isInViewport()
+            }}
+            onDoubleClick={() => this.setState({controls: true})}
+            width='100%' height='100%' 
+            ref={this.ref}
+            loop={true}
+            playing={playing}
+            //light={true}
+            muted={true}
+            controls={controls}
+            onProgress={this.handleProgress}
+            url='showreel.mp4'
+          />
           {/*<Slideshow images={slideshow} />*/}
         </div>
       </div>
