@@ -4308,7 +4308,7 @@ deep-is@^0.1.3, deep-is@~0.1.3:
   resolved "https://registry.nlark.com/deep-is/download/deep-is-0.1.4.tgz#a6f2dce612fadd2ef1f519b73551f17e85199831"
   integrity sha1-pvLc5hL63S7x9Rm3NVHxfoUZmDE=
 
-deepmerge@^4.2.2:
+deepmerge@^4.0.0, deepmerge@^4.2.2:
   version "4.2.2"
   resolved "https://registry.npm.taobao.org/deepmerge/download/deepmerge-4.2.2.tgz?cache=0&sync_timestamp=1593091003052&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdeepmerge%2Fdownload%2Fdeepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
   integrity sha1-RNLqNnm49NT/ujPwPYZfwee/SVU=
@@ -4517,6 +4517,11 @@ dom-serializer@^1.0.1:
     domelementtype "^2.0.1"
     domhandler "^4.2.0"
     entities "^2.0.0"
+
+dom-walk@^0.1.0:
+  version "0.1.2"
+  resolved "https://registry.npm.taobao.org/dom-walk/download/dom-walk-0.1.2.tgz#0c548bef048f4d1f2a97249002236060daa3fd84"
+  integrity sha1-DFSL7wSPTR8qlySQAiNgYNqj/YQ=
 
 domain-browser@^1.1.1:
   version "1.2.0"
@@ -5756,6 +5761,14 @@ global-prefix@^3.0.0:
     kind-of "^6.0.2"
     which "^1.3.1"
 
+global@^4.3.0:
+  version "4.4.0"
+  resolved "https://registry.npm.taobao.org/global/download/global-4.4.0.tgz#3e7b105179006a323ed71aafca3e9c57a5cc6406"
+  integrity sha1-PnsQUXkAajI+1xqvyj6cV6XMZAY=
+  dependencies:
+    min-document "^2.19.0"
+    process "^0.11.10"
+
 globals@^11.1.0:
   version "11.12.0"
   resolved "https://registry.nlark.com/globals/download/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
@@ -5971,7 +5984,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.1.0:
+hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
   version "3.3.2"
   resolved "https://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha1-7OCsr3HWLClpwuxZ/v9CpLGoW0U=
@@ -7551,6 +7564,11 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npm.taobao.org/lines-and-columns/download/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
+load-script@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/load-script/download/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
+  integrity sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
+
 loader-runner@^2.4.0:
   version "2.4.0"
   resolved "https://registry.npm.taobao.org/loader-runner/download/loader-runner-2.4.0.tgz?cache=0&sync_timestamp=1610027908268&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Floader-runner%2Fdownload%2Floader-runner-2.4.0.tgz#ed47066bfe534d7e84c4c7b9998c2a75607d9357"
@@ -7774,6 +7792,11 @@ media-typer@0.3.0:
   resolved "https://registry.npm.taobao.org/media-typer/download/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 
+memoize-one@^5.1.1:
+  version "5.2.1"
+  resolved "https://registry.npmmirror.com/memoize-one/download/memoize-one-5.2.1.tgz#8337aa3c4335581839ec01c3d594090cebe8f00e"
+  integrity sha1-gzeqPEM1WBg57AHD1ZQJDOvo8A4=
+
 memory-fs@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npm.taobao.org/memory-fs/download/memory-fs-0.4.1.tgz#3a9a20b8462523e447cfbc7e8bb80ed667bfc552"
@@ -7881,6 +7904,13 @@ mimic-response@^1.0.0, mimic-response@^1.0.1:
   version "1.0.1"
   resolved "https://registry.nlark.com/mimic-response/download/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
   integrity sha1-SSNTiHju9CBjy4o+OweYeBSHqxs=
+
+min-document@^2.19.0:
+  version "2.19.0"
+  resolved "https://registry.npm.taobao.org/min-document/download/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
+  integrity sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
+  dependencies:
+    dom-walk "^0.1.0"
 
 min-indent@^1.0.0:
   version "1.0.1"
@@ -9648,7 +9678,7 @@ prop-types-exact@^1.2.0:
     object.assign "^4.1.0"
     reflect.ownkeys "^0.2.0"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@~15.7.2:
+prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@~15.7.2:
   version "15.7.2"
   resolved "https://registry.npm.taobao.org/prop-types/download/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -9897,6 +9927,11 @@ react-error-overlay@^6.0.9:
   resolved "https://registry.npmmirror.com/react-error-overlay/download/react-error-overlay-6.0.9.tgz?cache=0&sync_timestamp=1633372820500&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact-error-overlay%2Fdownload%2Freact-error-overlay-6.0.9.tgz#3c743010c9359608c375ecd6bc76f35d93995b0a"
   integrity sha1-PHQwEMk1lgjDdezWvHbzXZOZWwo=
 
+react-fast-compare@^3.0.1:
+  version "3.2.0"
+  resolved "https://registry.npm.taobao.org/react-fast-compare/download/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
+  integrity sha1-ZBqdqBtqYyDycOiXJPtFoLOeQ7s=
+
 react-focus-lock@^2.5.0:
   version "2.5.2"
   resolved "https://registry.nlark.com/react-focus-lock/download/react-focus-lock-2.5.2.tgz#f1e4db5e25cd8789351f2bd5ebe91e9dcb9c2922"
@@ -9928,6 +9963,20 @@ react-full-screen@^1.0.1:
   dependencies:
     fscreen "^1.0.2"
 
+react-hot-loader@^4.13.0:
+  version "4.13.0"
+  resolved "https://registry.npm.taobao.org/react-hot-loader/download/react-hot-loader-4.13.0.tgz#c27e9408581c2a678f5316e69c061b226dc6a202"
+  integrity sha1-wn6UCFgcKmePUxbmnAYbIm3GogI=
+  dependencies:
+    fast-levenshtein "^2.0.6"
+    global "^4.3.0"
+    hoist-non-react-statics "^3.3.0"
+    loader-utils "^1.1.0"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+    shallowequal "^1.1.0"
+    source-map "^0.7.3"
+
 react-icons@^4.2.0:
   version "4.3.1"
   resolved "https://registry.npmmirror.com/react-icons/download/react-icons-4.3.1.tgz?cache=0&sync_timestamp=1633271105854&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact-icons%2Fdownload%2Freact-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
@@ -9957,6 +10006,11 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.npmmirror.com/react-is/download/react-is-17.0.2.tgz?cache=0&sync_timestamp=1634892304760&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact-is%2Fdownload%2Freact-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha1-5pHUqOnHiTZWVVOas3J2Kw77VPA=
+
+react-lifecycles-compat@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+  integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
 react-motion@^0.5.0:
   version "0.5.2"
@@ -9990,6 +10044,17 @@ react-photo-gallery@^8.0.0:
   dependencies:
     prop-types "~15.7.2"
     resize-observer-polyfill "^1.5.0"
+
+react-player@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.npm.taobao.org/react-player/download/react-player-2.9.0.tgz#ef7fe7073434087565f00ff219824e1e02c4b046"
+  integrity sha1-73/nBzQ0CHVl8A/yGYJOHgLEsEY=
+  dependencies:
+    deepmerge "^4.0.0"
+    load-script "^1.0.0"
+    memoize-one "^5.1.1"
+    prop-types "^15.7.2"
+    react-fast-compare "^3.0.1"
 
 react-property@2.0.0:
   version "2.0.0"
@@ -10170,6 +10235,13 @@ react-use@^17.2.4:
     throttle-debounce "^3.0.1"
     ts-easing "^0.2.0"
     tslib "^2.1.0"
+
+react-video-scroll@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmmirror.com/react-video-scroll/download/react-video-scroll-1.0.1.tgz#a716e51d3364a9d7b054714be55f7d89d5a54945"
+  integrity sha1-pxblHTNkqdewVHFL5V99idWlSUU=
+  dependencies:
+    prop-types "^15.6.1"
 
 react-view-pager@^0.6.0:
   version "0.6.0"
@@ -10906,6 +10978,11 @@ sha.js@^2.4.0, sha.js@^2.4.8:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+shallowequal@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmmirror.com/shallowequal/download/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
+  integrity sha1-GI1SHelbkIdAT9TctosT3wrk5/g=
 
 shebang-command@^1.2.0:
   version "1.2.0"

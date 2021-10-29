@@ -20,6 +20,7 @@ class Main extends Component {
       mailformvisible: false,
       mailformshow: true,
       buffer: 0,
+      played: 0,
     }
   }
 
@@ -51,28 +52,37 @@ class Main extends Component {
     })
   }
 
+  nuScroll = () => {
+    const scrollTop = this.myRef.current.scrollTop
+    const prevScroll = this.state.scrollTop
+    //console.log(prevScroll, scrollTop, this.state.buffer)
+    //console.log(scrollTop + 1, 1000 / (scrollTop + 5))
+    //this.child.seekTo( (scrollTop+5))
+    console.log(this.child.isInViewport())
+  }
   render() {
     return (
-      <Router>
         <div id='content'>
-          <MailForm
-            visibility={this.state.mailformvisible}
-            show={this.state.mailformshow}
-            onRef={(ref) => (this.child = ref)}
-          />
-          <div className='page parallax' ref={this.myRef}>
-            <Switch>
-              <Route
-                exact
-                path='/'
-                component={() => <Home showMailform={this.showMailform} />}
-              />
-              <Route path='/products' component={Products} />
-            </Switch>
+          <div className='page parallax' ref={this.myRef}
+          onScroll={this.nuScroll}>
+            {/*<MailForm
+              visibility={this.state.mailformvisible}
+              show={this.state.mailformshow}
+              onRef={(ref) => (this.child = ref)}
+            />*/}
+            <Router>
+              <Switch>
+                <Route
+                  exact
+                  path='/'
+                  component={() => <Home onRef={ref => (this.child = ref)} showMailform={this.showMailform} />}
+                />
+                <Route path='/products' component={Products} />
+              </Switch>
+            </Router>
             <Footer style={{ position: 'relative', visibility: 'hidden' }} />
           </div>
         </div>
-      </Router>
     )
   }
 }
