@@ -1,5 +1,8 @@
 @import './colours';
 
+$gap-size: 16px;
+$display-width: 900px;
+
 .content {
   //margin-top: 100px;
   overflow: visible;
@@ -54,7 +57,6 @@
   z-index: -5000;
 }
 
-
 #group1 {
   height: 45vw;
   z-index: 60;
@@ -84,15 +86,13 @@
   justify-content: center;
 }
 
-$gap-size: 16px;
-$display-width: 900px;
 
 .margin {
   clear: both;
   //margin: 0vh 500px 0vh $gap-size;
   margin: 0;
   //padding: 8vh $gap-size 8vh $gap-size;
-  padding: calc($gap-size * 2);
+  padding: calc($gap-size * 1);
   width: calc(100% - 4vw);
   max-width: $display-width;
 }
@@ -124,7 +124,7 @@ $display-width: 900px;
       margin: 25px 0;
     }
   }
-  margin-bottom: calc($gap-size * 2);
+  margin-bottom: $gap-size;
 }
 
 .clearfix::after {

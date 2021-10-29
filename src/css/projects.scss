@@ -6,6 +6,7 @@
   background: $bg-dark;
   color: $text-light;
   padding: $gap-size;
+  padding-top: 0;
 }
 
 .projects {
@@ -20,9 +21,10 @@
     width: 100%;
 
     padding: min(calc($gap-size / 2), 4px);
+    padding-top: 16px;
     padding-bottom: 0;
     background: none;
-    margin-top: 10px;
+    margin-top: 0px;
     
     img {
       object-fit: cover;
@@ -35,14 +37,17 @@
       position: absolute;
       bottom: 0;
       margin: 0;
-      color: white;
+      color: $bg-dark;
       display: none;
+      padding-left: 5px;
+      padding-bottom: 1px;
       transition: all 1s ease-out;
     }
     
-    .triangle {
-      $trize: 50px; // triange size
-      $color: $bg-light;
+      $trize: 40px; // triange size
+      $color: $bg-dark;
+    .triangle, .triange--hidden {
+      display: inline;
 
       position: absolute;
       bottom: 5px;
@@ -55,7 +60,12 @@
       border-bottom: $trize solid $color;
       border-left: $trize solid transparent;
       background: none;
-      display: none;
+      transition: all 0.4s ease-out;
+    }
+    .triangle--hidden {
+      border-bottom: 10px solid $color;
+      border-left: 10px solid transparent;
+
     }
     transition: all 0.4s ease-out;
   }
@@ -65,9 +75,11 @@
     //border: 2px solid black;
     padding: 0;
     margin: 20px;
-    margin-top: 0;
-    margin-left: 0;
     margin: 0;
+    margin-top: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-top: 8px;
     //background: #d6d6d6;
     transition: filter 0.1s ease-out;
     //padding: 3px;
@@ -78,9 +90,6 @@
     img {
       height: 100%;
     }
-    .triangle {
-      display: inline;
-    }
     h4 {
       display: block;
     }
@@ -90,11 +99,13 @@
   .img:hover {
     filter: brightness(50%);
     transition: filter 0.1s linear;
+    height: 110%;
+    width: 125%;
+    padding-top: 8px;
+    transition: all 0.3s linear;
     h4 {
       display: block;
-      position: absolute;
-      bottom: 0px;
-      transition: all 1s ease-out;
+      padding-bottom: 10px;
     }
   }
 }
@@ -113,15 +124,34 @@
     //max-width: 50%;
   }
 
-  .img {
+  .imgs {
     //max-width: 50%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
-    img {
-      height: auto;
+
+    width: 100%;
+    gap: $gap-size;
+
+    .bigimg {
       width: 50%;
-      max-width: 33%;
+    }
+    .smallimgs {
+      display: flex;
+      gap: $gap-size;
+      //flex-wrap: wrap;
+      max-width: 50%;
+      .img {
+        max-width: 50%;
+      }
+      img {
+        //max-width: 50%;
+      }
+    }
+    
+    img {
+      width: 100%;
+      height: auto;
     }
   }
   transition: all 1s linear;

@@ -130,25 +130,6 @@ export default class Home extends Component{
 
       <div id='group2' className='parallaxGroup'>
         <div className='text-image margin'>
-          <ReactPlayer url='showreel.mp4' 
-            loop={true}
-            playing={playing}
-            onProgress={this.handleProgress}
-          />
-          <button onClick={this.temp}>
-            CLICK HERE TO SET VIDEO TO START
-          </button>
-          <button onClick={() => this.setState({playVideo: false})}>
-            PAUSE
-          </button>
-          <button onClick={() => {
-            this.setState({playVideo: true})
-            console.log('clicked')
-            this.isInViewport()
-          }}
-          >
-            PLAY
-          </button>
           <div className='flex-text-image'>
             <div className='txtcontainer'>
               <h3> MVFX STUDIO </h3>
@@ -205,21 +186,6 @@ export default class Home extends Component{
         </div>          
       </div>
 
-          <button onClick={this.temp}>
-            CLICK HERE TO SET VIDEO TO START
-          </button>
-          <button onClick={() => this.setState({playVideo: false})}>
-            PAUSE
-          </button>
-          <button onClick={() => {
-            this.setState({playVideo: true})
-            this.setState({playVideo: false})
-            console.log('clicked')
-            this.isInViewport()
-          }}
-          >
-            PLAY
-          </button>
       <div ref={(e) => this.showreel = e} className='parallaxGroup showreel-placeholder'>
         <div id='video' className='parallaxLayer layerBack flex'>
           <ReactPlayer 
