@@ -96,7 +96,7 @@ class Main extends Component {
                 <Route path='/products' component={Products} />
               </Switch>
             </Router>
-            <Footer style={{ position: 'relative', visibility: 'hidden' }} />
+            <Footer style={{ position: 'relative', visibility: 'visible' }} />
           </div>
           <Footer
             style={{ visibility: this.state.showFooter ? 'visible' : 'hidden' }}

@@ -124,7 +124,7 @@ export default class Home extends Component {
     return (
       <>
         <div id='group1' className='parallaxGroup'>
-          <div className='parallaxLayer layerBack'>
+          <div id='animation' className='parallaxLayer layerBack'>
             {/*<Slideshow images={slideshow} />*/}
             <img src='images/folding.jpeg' alt='folding desk design' />
           </div>
