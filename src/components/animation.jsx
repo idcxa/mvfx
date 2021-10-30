@@ -7,10 +7,6 @@ function pad(num, size) {
 }
 
 export default class Animation extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     let images = this.loadImages()
     images.forEach((x) => {
