@@ -5,8 +5,7 @@
 .projects-list {
   background: $bg-dark;
   color: $text-light;
-  padding: $gap-size;
-  padding-top: 0;
+  padding: 0;
 }
 
 .projects {
@@ -14,6 +13,7 @@
   justify-content: space-evenly;
   padding: 0;
   min-height: 232px;
+  padding: 8px 8px;
   .img, .img--selected {
     position:sticky;
 
@@ -41,11 +41,11 @@
       display: none;
       padding-left: 5px;
       padding-bottom: 1px;
-      transition: all 1s ease-out;
+      //transition: all 1s ease-out;
     }
     
-      $trize: 40px; // triange size
-      $color: $bg-dark;
+    $trize: 40px; // triange size
+    $color: $bg-dark;
     .triangle, .triange--hidden {
       display: inline;
 
@@ -60,11 +60,12 @@
       border-bottom: $trize solid $color;
       border-left: $trize solid transparent;
       background: none;
-      transition: all 0.4s ease-out;
+      transition: all 0.4s linear;
     }
     .triangle--hidden {
       border-bottom: 10px solid $color;
       border-left: 10px solid transparent;
+      transition: all 0.9s ease-out;
 
     }
     transition: all 0.4s ease-out;
@@ -73,13 +74,7 @@
   .img--selected { 
     background: none;
     //border: 2px solid black;
-    padding: 0;
-    margin: 20px;
-    margin: 0;
-    margin-top: 0px;
-    margin-left: 4px;
-    margin-right: 4px;
-    padding-top: 8px;
+    padding: 0 4px;
     //background: #d6d6d6;
     transition: filter 0.1s ease-out;
     //padding: 3px;
@@ -130,6 +125,8 @@
     flex-wrap: nowrap;
     justify-content: space-between;
 
+    padding: 3px 8px;
+
     width: 100%;
     gap: $gap-size;
 
@@ -143,9 +140,6 @@
       max-width: 50%;
       .img {
         max-width: 50%;
-      }
-      img {
-        //max-width: 50%;
       }
     }
     

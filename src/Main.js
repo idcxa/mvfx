@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 import Home from './home'
 import Products from './book'
-import './css/header.scss'
+//import './css/header.scss'
 import Navbar from './components/navbar'
 import Footer from './components/footer'
 import MailForm from './components/mailform'
@@ -62,6 +62,7 @@ class Main extends Component {
   }
   render() {
     return (
+      <>
         <div id='content'>
           <div className='page parallax' ref={this.myRef}
           onScroll={this.nuScroll}>
@@ -83,7 +84,9 @@ class Main extends Component {
             <Footer style={{ position: 'relative', visibility: 'hidden' }} />
           </div>
         </div>
-    )
+        </>
+        )
+      
   }
 }
 

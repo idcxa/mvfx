@@ -7,6 +7,7 @@ import { homepage, slideshow } from './components/gallery'
 import Fade from 'react-reveal/Fade'
 import Clients from './components/clients.jsx'
 import ReactPlayer from 'react-player'
+import Animation from './components/animation'
 import PlayerApp from './components/react-player'
 import { render } from '@testing-library/react'
 import screenfull from 'screenfull'
@@ -130,7 +131,7 @@ export default class Home extends Component{
 
       <div id='group2' className='parallaxGroup'>
         <div className='text-image margin'>
-          <div className='flex-text-image'>
+          <div id='text1' className='flex-text-image'>
             <div className='txtcontainer'>
               <h3> MVFX STUDIO </h3>
               <p>
@@ -186,28 +187,28 @@ export default class Home extends Component{
         </div>          
       </div>
 
-      <div ref={(e) => this.showreel = e} className='parallaxGroup showreel-placeholder'>
-        <div id='video' className='parallaxLayer layerBack flex'>
-          <ReactPlayer 
-            onClick={() => {
-              this.setState({playVideo: true})
-              console.log('clicked')
-              this.isInViewport()
-            }}
-            onDoubleClick={() => this.setState({controls: true})}
-            width='100%' height='100%' 
-            ref={this.ref}
-            loop={true}
-            playing={playing}
-            //light={true}
-            muted={true}
-            controls={controls}
-            onProgress={this.handleProgress}
-            url='showreel.mp4'
-          />
-          {/*<Slideshow images={slideshow} />*/}
-        </div>
+    <div ref={(e) => this.showreel = e} className='parallaxGroup showreel-placeholder'>
+      <div id='video' className='parallaxLayer layerBack flex'>
+        <ReactPlayer 
+          onClick={() => {
+            this.setState({playVideo: true})
+            console.log('clicked')
+            this.isInViewport()
+          }}
+          onDoubleClick={() => this.setState({controls: true})}
+          width='100%' height='100%' 
+          ref={this.ref}
+          loop={true}
+          playing={playing}
+          //light={true}
+          muted={true}
+          controls={controls}
+          onProgress={this.handleProgress}
+          url='showreel.mp4'
+        />
+        {/*<Slideshow images={slideshow} />*/}
       </div>
+    </div>
  
     <div id='group2' className='parallaxGroup'>
       <div className='bookings margin'>
@@ -260,7 +261,13 @@ export default class Home extends Component{
           </div>
         </div>
       </div>
+    </div>
+
+    <div className='parallaxGroup showreel-placeholder'>
+      <div id='video' className='parallaxLayer layerBack flex'>
+        <Animation dir='' prefix='Comp\ 1_00' total='117' progress='0.5'/>
       </div>
+    </div>
 
     <div id='group2' className='parallaxGroup'>
       <div id='text2' className='text-image margin'>
