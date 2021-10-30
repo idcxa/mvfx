@@ -1,7 +1,6 @@
 @import './home';
 @import './colours';
 
-
 .projects-list {
   background: $bg-dark;
   color: $text-light;
@@ -14,8 +13,9 @@
   padding: 0;
   min-height: 232px;
   padding: 8px 8px;
-  .img, .img--selected {
-    position:sticky;
+  .img,
+  .img--selected {
+    position: sticky;
 
     height: calc(100% - 5px);
     width: 100%;
@@ -25,7 +25,7 @@
     padding-bottom: 0;
     background: none;
     margin-top: 0px;
-    
+
     img {
       object-fit: cover;
       width: 100%;
@@ -43,14 +43,15 @@
       padding-bottom: 1px;
       //transition: all 1s ease-out;
     }
-    
+
     $trize: 40px; // triange size
     $color: $bg-dark;
-    .triangle, .triange--hidden {
+    .triangle,
+    .triange--hidden {
       display: inline;
 
       position: absolute;
-      bottom: 5px;
+      bottom: 0;
       right: 0;
       width: 0;
       height: 0;
@@ -66,12 +67,11 @@
       border-bottom: 10px solid $color;
       border-left: 10px solid transparent;
       transition: all 0.9s ease-out;
-
     }
     transition: all 0.4s ease-out;
   }
 
-  .img--selected { 
+  .img--selected {
     background: none;
     //border: 2px solid black;
     padding: 0 4px;
@@ -110,10 +110,10 @@
   flex-direction: column;
   justify-content: space-between;
 
-  padding-top: $gap-size;  
+  padding-top: $gap-size;
   background: none;
   .text {
-    text-align: center;  
+    text-align: center;
     padding-right: $gap-size;
     padding: 2vh 16vh;
     //max-width: 50%;
@@ -142,7 +142,7 @@
         max-width: 50%;
       }
     }
-    
+
     img {
       width: 100%;
       height: auto;
