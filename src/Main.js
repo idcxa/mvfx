@@ -21,6 +21,7 @@ class Main extends Component {
       mailformshow: true,
       buffer: 0,
       played: 0,
+      showFooter: false,
     }
   }
 
@@ -53,19 +54,28 @@ class Main extends Component {
   }
 
   nuScroll = () => {
-    const scrollTop = this.myRef.current.scrollTop
-    const prevScroll = this.state.scrollTop
+    //const scrollTop = this.myRef.current.scrollTop
+    //const prevScroll = this.state.scrollTop
     //console.log(prevScroll, scrollTop, this.state.buffer)
     //console.log(scrollTop + 1, 1000 / (scrollTop + 5))
     //this.child.seekTo( (scrollTop+5))
-    console.log(this.child.isInViewport())
+
+    //const top = this.page.getBoundingClientRect().top
+    //const bottom = this.page.getBoundingClientRect().bottom
+
+    //console.log(top, bottom)
+
+    this.child.isInViewport()
   }
+
   render() {
     return (
       <>
         <div id='content'>
-          <div className='page parallax' ref={this.myRef}
-          onScroll={this.nuScroll}>
+          <div
+            ref={(e) => (this.page = e)}
+            className='page parallax'
+            onScroll={this.nuScroll}>
             {/*<MailForm
               visibility={this.state.mailformvisible}
               show={this.state.mailformshow}
@@ -76,17 +86,24 @@ class Main extends Component {
                 <Route
                   exact
                   path='/'
-                  component={() => <Home onRef={ref => (this.child = ref)} showMailform={this.showMailform} />}
+                  component={() => (
+                    <Home
+                      onRef={(ref) => (this.child = ref)}
+                      showMailform={this.showMailform}
+                    />
+                  )}
                 />
                 <Route path='/products' component={Products} />
               </Switch>
             </Router>
             <Footer style={{ position: 'relative', visibility: 'hidden' }} />
           </div>
+          <Footer
+            style={{ visibility: this.state.showFooter ? 'visible' : 'hidden' }}
+          />
         </div>
-        </>
-        )
-      
+      </>
+    )
   }
 }
 

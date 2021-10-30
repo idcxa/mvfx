@@ -18,17 +18,17 @@ $display-width: 900px;
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: black; 
+  background: black;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
 
 .page {
@@ -86,7 +86,6 @@ $display-width: 900px;
   justify-content: center;
 }
 
-
 .margin {
   clear: both;
   //margin: 0vh 500px 0vh $gap-size;
@@ -108,7 +107,7 @@ $display-width: 900px;
   gap: $gap-size;
   display: flex;
   justify-content: space-between;
-  
+
   padding: 4vh 0 0 0;
   //background: red;
 }
@@ -163,7 +162,7 @@ $display-width: 900px;
   img {
     object-fit: cover;
     width: 100%;
-    height: 100%; 
+    height: 100%;
   }
 }
 
@@ -181,7 +180,7 @@ $display-width: 900px;
   }
 
   .txtcontainer {
-    background: $bg-dark;
+    background: none;
     color: $text-light;
     width: 100%;
   }
@@ -535,7 +534,25 @@ $display-width: 900px;
   filter: none;
   width: 100%;
 }
-
+#animation {
+  //width: $display-width;
+  //width: 200px;
+  //height: 200px;
+  //align-items: flex-end;
+  //position: absolute;
+  //top: 200px;
+  transform: translateZ(+50px) scale(0.8);
+  filter: none;
+  z-index: 10000;
+  width: 100%;
+  img {
+    left: 0;
+    top: 0;
+    position: absolute;
+    object-fit: cover;
+    max-width: calc($display-width + 3000px);
+  }
+}
 
 /* PARALLAX CLASSES */
 
@@ -567,10 +584,9 @@ $display-width: 900px;
   }
 }
 
-
 @media only screen and (min-width: 2000px) {
   //.sidebyside {
-    //display: flex;
+  //display: flex;
   //}
   .clients-div {
     color: $text-dark;
