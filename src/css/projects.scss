@@ -128,14 +128,14 @@
     padding: 3px 8px;
 
     width: 100%;
-    gap: $gap-size;
+    gap: calc($gap-size / 2);
 
     .bigimg {
       width: 50%;
     }
     .smallimgs {
       display: flex;
-      gap: $gap-size;
+      gap: calc($gap-size / 2);
       //flex-wrap: wrap;
       max-width: 50%;
       .img {
