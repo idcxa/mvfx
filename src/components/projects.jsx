@@ -3,6 +3,7 @@ import Slideshow from './slideshow'
 
 import { homepage, slideshow } from './gallery'
 import '../css/projects.scss'
+import { collapseTextChangeRangesAcrossMultipleVersions } from 'typescript'
 
 const projects = [
     {
@@ -67,17 +68,16 @@ export default class Projects extends Component {
                 {projects.map((x, i) => (
                     <>
                         <div 
-                        className={i === this.state.selected ? 'img--selected' : 'img'} 
-                        onClick={() => this.select(i)}
-                        style={{
-                            paddingLeft: i === 0  ? '0' : '',
-                            paddingRight: i === projects.length - 1 ? '0' : '',
-                        }}
+                            className={i === this.state.selected ? 'img--selected' : 'img'} 
+                            onClick={() => this.select(i)}
+                            style={{
+                                paddingLeft: i === 0  ? '0' : '',
+                                paddingRight: i === projects.length - 1 ? '0' : '',
+                            }}
                         >
                             <img src={x.thumbnail} alt='thumbnail'/>
                             <h4>0{i+1}</h4>
-                            <div className='triangle'
-                            />
+                            <div className={i == this.state.selected ? 'triangle' : 'triangle--hidden'} />
                         </div>
                     </>
                 ))}
@@ -87,10 +87,18 @@ export default class Projects extends Component {
                     <h3>{projects[this.state.selected].title}</h3>
                     <p>{projects[this.state.selected].body}</p>
                 </div>
-                <div className='img'>
-                    <img src={projects[this.state.selected].thumbnail} />
-                    <img src='SQUARE/GREEN_ENERGY.jpg' />
-                    <img src='SQUARE/BUTTER.jpg' />
+                <div className='imgs'>
+                    <div className='bigimg'>
+                        <img src={projects[this.state.selected].thumbnail} />
+                    </div>
+                    <div className='smallimgs'>
+                        <div className='img'>
+                            <img src='SQUARE/GREEN_ENERGY.jpg' />
+                        </div>
+                        <div className='img'>
+                            <img src='SQUARE/BUTTER.jpg' />
+                        </div>
+                    </div>
                     {/*<Slideshow images={projects[this.state.selected].gallery} />*/}
                 </div>
             </div>
